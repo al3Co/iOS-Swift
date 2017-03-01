@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Save Data-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="DataBase_Tabbed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dato 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gp-cb-Kbw">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dato 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3U-8n-Y43">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dato 3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkb-Nc-5Jw">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhI-a4-bG1">
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="SaveButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Mrk-Ea-gce"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rhI-a4-bG1" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Dqt-6Y-eCS"/>
+                            <constraint firstItem="nkb-Nc-5Jw" firstAttribute="trailing" secondItem="X3U-8n-Y43" secondAttribute="trailing" id="MIS-je-rS9"/>
+                            <constraint firstItem="nkb-Nc-5Jw" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="54" id="ObA-Qo-89U"/>
+                            <constraint firstItem="nkb-Nc-5Jw" firstAttribute="centerX" secondItem="rhI-a4-bG1" secondAttribute="centerX" id="Tdn-6I-pNX"/>
+                            <constraint firstItem="nkb-Nc-5Jw" firstAttribute="leading" secondItem="0gp-cb-Kbw" secondAttribute="leading" id="dVc-OK-8Dz"/>
+                            <constraint firstItem="nkb-Nc-5Jw" firstAttribute="leading" secondItem="X3U-8n-Y43" secondAttribute="leading" id="gFe-na-QiE"/>
+                            <constraint firstItem="rhI-a4-bG1" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="gLG-Ld-eop"/>
+                            <constraint firstItem="rhI-a4-bG1" firstAttribute="top" secondItem="nkb-Nc-5Jw" secondAttribute="bottom" constant="53" id="if1-0K-nut"/>
+                            <constraint firstItem="X3U-8n-Y43" firstAttribute="top" secondItem="0gp-cb-Kbw" secondAttribute="bottom" constant="35" id="jcX-SV-7mr"/>
+                            <constraint firstItem="nkb-Nc-5Jw" firstAttribute="trailing" secondItem="0gp-cb-Kbw" secondAttribute="trailing" id="u09-3o-LpG"/>
+                            <constraint firstItem="nkb-Nc-5Jw" firstAttribute="top" secondItem="X3U-8n-Y43" secondAttribute="bottom" constant="36" id="zJ3-XV-Mm8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Save Data" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="Dato1TextField" destination="0gp-cb-Kbw" id="YkN-3Z-aCP"/>
+                        <outlet property="Dato2TextField" destination="X3U-8n-Y43" id="ZjS-Ke-EsC"/>
+                        <outlet property="Dato3TextField" destination="nkb-Nc-5Jw" id="Yra-iY-Mak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Data saved-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="DataBase_Tabbed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sdE-7r-zu7">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sdE-7r-zu7" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="BZU-sZ-nem"/>
+                            <constraint firstItem="sdE-7r-zu7" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Em0-Kl-SxZ"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="sdE-7r-zu7" secondAttribute="bottom" constant="78" id="OAU-uC-FaM"/>
+                            <constraint firstItem="sdE-7r-zu7" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Tar-gq-iH6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Data saved" image="second" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
