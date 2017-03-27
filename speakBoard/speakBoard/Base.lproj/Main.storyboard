@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,13 +38,65 @@
                     <view key="view" contentMode="scaleToFill" id="bh4-i5-AIv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NG-XU-Gpw">
+                                <rect key="frame" x="16" y="151" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Cambiar Género y Edad">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3DY-Mz-vbm" kind="show" id="jpE-Lc-GUm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiI-kG-fcR">
+                                <rect key="frame" x="121" y="484" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Créditos">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Mbc-6J-D79" kind="show" id="nD4-C2-QNX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Configuración" id="A8k-4W-TFR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZN-XS-A3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="177" y="-1013"/>
+            <point key="canvasLocation" x="884" y="-1118.5907046476761"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ss1-et-O2U">
+            <objects>
+                <viewController id="Mbc-6J-D79" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zX4-cO-VEe"/>
+                        <viewControllerLayoutGuide type="bottom" id="KVY-2X-Oh3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U6I-gt-890">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kfD-p2-bfn">
+                                <rect key="frame" x="16" y="72" width="343" height="384"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Objetivo: Implementar una aplicación que facilite la comunicación vía sonido para personas con cualquier limitación o trastorno de habla. Las personas  con discapacidad de aprendizaje basada en lenguaje también podrían ayudarse de ésta aplicación pero no del todo, por el hecho de que personas con esta discapacidad pueden tener más dificultades en otras áreas que solo en el habla, creando situaciones más específicas en su tratamiento.                                                                                 Contacto: Eduardo Contreras                    ingelalito@gmail.com                           Programación: Aldo Contreras</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yC8-Pg-1dN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="-1119.4902548725638"/>
         </scene>
         <!--Speak Board-->
         <scene sceneID="tne-QT-ifu">
@@ -72,7 +125,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3DY-Mz-vbm" kind="show" id="g8W-0b-cFZ"/>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnb-7V-gpM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,6 +144,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="3DY-Mz-vbm" kind="show" identifier="Genero" id="Gc6-6P-kZ9"/>
+                        <segue destination="Jhm-Zt-dxA" kind="show" identifier="Selecciona" id="pI6-th-X5d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,7 +234,7 @@
                                 </state>
                                 <connections>
                                     <action selector="adolescenteButton:" destination="KQn-PP-Nvt" eventType="touchUpInside" id="mav-k0-fpU"/>
-                                    <segue destination="Jhm-Zt-dxA" kind="show" id="9e6-8B-YaP"/>
+                                    <segue destination="Jhm-Zt-dxA" kind="show" identifier="Selecciona" id="9e6-8B-YaP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K13-rZ-Dem">
@@ -234,7 +291,7 @@
                                 <rect key="frame" x="16" y="259" width="343" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Necesidades Básicas">
+                                <state key="normal" title="Necesidades">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -403,7 +460,7 @@
                                         <rect key="frame" x="0.0" y="160" width="200" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Cama">
+                                        <state key="normal" title="Ropero">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -474,12 +531,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5g-Ac-DOW">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wzd-1f-klM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5g-Ac-DOW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ag8-d0-Db1">
+                                <rect key="frame" x="63" y="105" width="100" height="100"/>
+                                <state key="normal" image="calor.jpg"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="kzr-6y-kap" eventType="touchUpInside" id="Yho-lz-L78"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRy-Xa-57U">
+                                <rect key="frame" x="219" y="105" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="YE2-Eb-d5u"/>
+                                </constraints>
+                                <state key="normal" image="Frio.jpg"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="kzr-6y-kap" eventType="touchUpInside" id="4gE-E2-QAV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baA-hG-pih">
+                                <rect key="frame" x="63" y="283" width="100" height="100"/>
+                                <state key="normal" image="Si.jpg"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="kzr-6y-kap" eventType="touchUpInside" id="Jxv-sG-fO6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sF-br-qaB">
+                                <rect key="frame" x="219" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="xO7-1U-nNq"/>
+                                </constraints>
+                                <state key="normal" image="No.jpg"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="kzr-6y-kap" eventType="touchUpInside" id="VSj-sj-TwY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ee-L4-Kp6">
+                                <rect key="frame" x="63" y="439" width="100" height="100"/>
+                                <state key="normal" image="Quiero.jpg"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="kzr-6y-kap" eventType="touchUpInside" id="ePc-ea-Nov"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbm-ut-PvS">
+                                <rect key="frame" x="219" y="439" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ouf-WJ-ddt"/>
+                                </constraints>
+                                <state key="normal" image="No quiero.jpg"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="kzr-6y-kap" eventType="touchUpInside" id="CrZ-Fo-EQm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Ee-L4-Kp6" firstAttribute="top" secondItem="baA-hG-pih" secondAttribute="bottom" constant="56" id="4Ag-QJ-XNc"/>
+                            <constraint firstItem="wVc-Av-Bsf" firstAttribute="top" secondItem="1Ee-L4-Kp6" secondAttribute="bottom" constant="128" id="4cq-0R-l8W"/>
+                            <constraint firstItem="7sF-br-qaB" firstAttribute="leading" secondItem="fRy-Xa-57U" secondAttribute="leading" id="5IS-Vm-peg"/>
+                            <constraint firstItem="baA-hG-pih" firstAttribute="leading" secondItem="Ag8-d0-Db1" secondAttribute="leading" id="5gL-Fp-pm2"/>
+                            <constraint firstAttribute="trailing" secondItem="Wzd-1f-klM" secondAttribute="trailing" id="6h6-X8-zWI"/>
+                            <constraint firstItem="fRy-Xa-57U" firstAttribute="bottom" secondItem="Ag8-d0-Db1" secondAttribute="bottom" id="7Bz-IO-22L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fRy-Xa-57U" secondAttribute="trailing" constant="40" id="BhZ-He-eDT"/>
+                            <constraint firstItem="7sF-br-qaB" firstAttribute="leading" secondItem="fbm-ut-PvS" secondAttribute="leading" id="G1x-gu-Uru"/>
+                            <constraint firstItem="fbm-ut-PvS" firstAttribute="bottom" secondItem="1Ee-L4-Kp6" secondAttribute="bottom" id="Hbv-03-hv3"/>
+                            <constraint firstItem="Wzd-1f-klM" firstAttribute="top" secondItem="cKZ-mb-RNI" secondAttribute="top" id="JKN-Vd-6QO"/>
+                            <constraint firstItem="7sF-br-qaB" firstAttribute="top" secondItem="baA-hG-pih" secondAttribute="top" id="Md2-rM-9Kw"/>
+                            <constraint firstItem="fRy-Xa-57U" firstAttribute="leading" secondItem="Ag8-d0-Db1" secondAttribute="trailing" constant="56" id="TEw-NA-fEZ"/>
+                            <constraint firstItem="7sF-br-qaB" firstAttribute="bottom" secondItem="baA-hG-pih" secondAttribute="bottom" id="V0t-XX-aqm"/>
+                            <constraint firstItem="fbm-ut-PvS" firstAttribute="top" secondItem="1Ee-L4-Kp6" secondAttribute="top" id="Wna-v0-txA"/>
+                            <constraint firstItem="wVc-Av-Bsf" firstAttribute="top" secondItem="fRy-Xa-57U" secondAttribute="bottom" constant="462" id="YVn-ty-OKh"/>
+                            <constraint firstItem="Ag8-d0-Db1" firstAttribute="leading" secondItem="cKZ-mb-RNI" secondAttribute="leadingMargin" constant="47" id="Zdd-iM-slz"/>
+                            <constraint firstItem="fRy-Xa-57U" firstAttribute="top" secondItem="apr-f2-Wja" secondAttribute="bottom" constant="41" id="bgg-Sc-cif"/>
+                            <constraint firstItem="7sF-br-qaB" firstAttribute="leading" secondItem="baA-hG-pih" secondAttribute="trailing" constant="56" id="cBY-pq-mMJ"/>
+                            <constraint firstItem="Wzd-1f-klM" firstAttribute="bottom" secondItem="wVc-Av-Bsf" secondAttribute="top" id="fGO-DW-4IN"/>
+                            <constraint firstItem="Wzd-1f-klM" firstAttribute="leading" secondItem="cKZ-mb-RNI" secondAttribute="leading" id="kYA-DH-Frw"/>
+                            <constraint firstItem="Wzd-1f-klM" firstAttribute="centerY" secondItem="baA-hG-pih" secondAttribute="centerY" id="n4c-Wq-8DR"/>
+                            <constraint firstItem="fbm-ut-PvS" firstAttribute="leading" secondItem="1Ee-L4-Kp6" secondAttribute="trailing" constant="56" id="njf-J4-2sX"/>
+                            <constraint firstItem="baA-hG-pih" firstAttribute="leading" secondItem="1Ee-L4-Kp6" secondAttribute="leading" id="qS0-7I-Xie"/>
+                            <constraint firstItem="baA-hG-pih" firstAttribute="top" secondItem="Ag8-d0-Db1" secondAttribute="bottom" constant="78" id="wBY-pJ-4EX"/>
+                            <constraint firstItem="fRy-Xa-57U" firstAttribute="top" secondItem="Ag8-d0-Db1" secondAttribute="top" id="zYo-aH-cIL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Básico" id="gHz-jZ-ypd"/>
                     <connections>
@@ -502,12 +641,179 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-BP-5LH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-BP-5LH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8js-hb-07B">
+                                <rect key="frame" x="16" y="72" width="343" height="545"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M2n-aN-kFA">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="545"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf3-UH-BGA">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Acostarse.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="WRF-bb-DPi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXG-gW-MGP">
+                                                <rect key="frame" x="0.0" y="113" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="DESNUDAR.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="eOn-eS-Qa3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW3-E7-Ngb">
+                                                <rect key="frame" x="0.0" y="226" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Enciende la tele.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="y88-eW-Pqv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiJ-fp-91d">
+                                                <rect key="frame" x="0.0" y="339" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Jugar.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="QId-v4-CYZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrD-yi-14Y">
+                                                <rect key="frame" x="0.0" y="452" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Lavar los dientes.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="Ptw-eB-s1T"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f5k-WX-h6E">
+                                        <rect key="frame" x="91" y="0.0" width="70.5" height="545"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykW-qz-9TE">
+                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="93"/>
+                                                <state key="normal" title="Button" image="Afeitar.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="YhY-rC-fLu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-f0-vCA">
+                                                <rect key="frame" x="0.0" y="113" width="70.5" height="93"/>
+                                                <state key="normal" title="Button" image="Dormir.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="mm9-3T-7nm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cym-W5-xdu">
+                                                <rect key="frame" x="0.0" y="226" width="70.5" height="93"/>
+                                                <state key="normal" title="Button" image="Ver.JPG"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="9zO-nL-gIO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-1O-Qp9">
+                                                <rect key="frame" x="0.0" y="339" width="70.5" height="93"/>
+                                                <state key="normal" title="Button" image="Lavar el pelo.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="qqw-uh-qYK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIO-du-TZS">
+                                                <rect key="frame" x="0.0" y="452" width="70.5" height="93"/>
+                                                <state key="normal" title="Button" image="Levantarse.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="xtt-cb-TGk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mHh-xL-SuG">
+                                        <rect key="frame" x="181.5" y="0.0" width="71" height="545"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWf-Sp-o5F">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Apaga la tele.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="unA-8T-4uf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B1-Bb-2FX">
+                                                <rect key="frame" x="0.0" y="113" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Duchar.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="lXc-Ce-gey"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cm-Wk-dDA">
+                                                <rect key="frame" x="0.0" y="226" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Hacer la cama.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="XSf-AP-LLe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooQ-N9-3d1">
+                                                <rect key="frame" x="0.0" y="339" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Lavar la cara.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="iKe-Pw-uw1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-9p-8UT">
+                                                <rect key="frame" x="0.0" y="452" width="71" height="93"/>
+                                                <state key="normal" title="Button" image="Pasear.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="7v9-cb-0CP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pYJ-un-cxc">
+                                        <rect key="frame" x="272.5" y="0.0" width="70.5" height="545"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLp-Ua-Ki5">
+                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="121.5"/>
+                                                <state key="normal" title="Button" image="baño.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="cPC-SU-WEo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwl-Ht-RX5">
+                                                <rect key="frame" x="0.0" y="141.5" width="70.5" height="121"/>
+                                                <state key="normal" title="Button" image="Beber.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="S4l-kb-CnU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpT-xb-xWI">
+                                                <rect key="frame" x="0.0" y="282.5" width="70.5" height="121.5"/>
+                                                <state key="normal" title="Button" image="Comer.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="gYf-1J-jRI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH3-vA-WFn">
+                                                <rect key="frame" x="0.0" y="424" width="70.5" height="121"/>
+                                                <state key="normal" title="Button" image="Hablar.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="PCh-s0-BVU" eventType="touchUpInside" id="M00-ko-iYm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xb0-BP-5LH" firstAttribute="top" secondItem="57k-1A-60J" secondAttribute="top" id="18I-OO-qxy"/>
+                            <constraint firstAttribute="trailing" secondItem="Xb0-BP-5LH" secondAttribute="trailing" id="4DK-RR-j0z"/>
+                            <constraint firstItem="Xb0-BP-5LH" firstAttribute="bottom" secondItem="QsP-aw-Nnt" secondAttribute="top" id="U9A-ex-7hN"/>
+                            <constraint firstItem="Xb0-BP-5LH" firstAttribute="centerX" secondItem="8js-hb-07B" secondAttribute="centerX" id="Xdi-M5-msi"/>
+                            <constraint firstItem="QsP-aw-Nnt" firstAttribute="top" secondItem="8js-hb-07B" secondAttribute="bottom" constant="50" id="aWW-B7-EIN"/>
+                            <constraint firstItem="Xb0-BP-5LH" firstAttribute="leading" secondItem="57k-1A-60J" secondAttribute="leading" id="uku-Pj-J0J"/>
+                            <constraint firstItem="8js-hb-07B" firstAttribute="top" secondItem="sST-H8-0fP" secondAttribute="bottom" constant="8" symbolic="YES" id="xiB-Mw-FzN"/>
+                            <constraint firstItem="8js-hb-07B" firstAttribute="leading" secondItem="57k-1A-60J" secondAttribute="leadingMargin" id="y9b-hU-h7d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Acciones" id="Xd1-kg-xQ6"/>
                     <connections>
@@ -518,7 +824,7 @@
             </objects>
             <point key="canvasLocation" x="3992.8000000000002" y="-1328.1859070464768"/>
         </scene>
-        <!--De cama-->
+        <!--Ropero-->
         <scene sceneID="QcI-uw-xZQ">
             <objects>
                 <viewController id="dRD-90-LjK" customClass="CamaViewController" customModule="speakBoard" customModuleProvider="target" sceneMemberID="viewController">
@@ -534,10 +840,136 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mt9-4m-Jf4">
+                                <rect key="frame" x="16" y="72" width="343" height="550"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cxO-or-Wwd">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="550"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRm-oo-ZR9">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="blusa.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="wOS-bo-FXA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVu-PB-kWP">
+                                                <rect key="frame" x="0.0" y="114" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="camisa manga larga.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="LlG-Ad-TvN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFr-21-Kw2">
+                                                <rect key="frame" x="0.0" y="228" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="playera.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="KOa-f6-mRy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3r-sw-D7E">
+                                                <rect key="frame" x="0.0" y="342" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="shorts - mujer hombre.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="8oL-DS-6gM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nk-gS-Zc6">
+                                                <rect key="frame" x="0.0" y="456" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="vestido.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="Qpg-nE-VTk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ubd-eF-saa">
+                                        <rect key="frame" x="121" y="0.0" width="101" height="550"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-V7-jjA">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="camisa manga corta.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="AkR-GY-hdx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5A-Mc-0QO">
+                                                <rect key="frame" x="0.0" y="114" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="falda.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="1DP-zT-TNe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-8x-eLP">
+                                                <rect key="frame" x="0.0" y="228" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="Sandalias.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="rgT-v9-IMN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-4s-R8x">
+                                                <rect key="frame" x="0.0" y="342" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="tenis - hombremujer.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="uKg-Yh-x3m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbu-VK-Nm0">
+                                                <rect key="frame" x="0.0" y="456" width="101" height="94"/>
+                                                <state key="normal" title="Button" image="zapatillas.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="Lk7-6Q-QRd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mMj-V5-EBZ">
+                                        <rect key="frame" x="242" y="0.0" width="101" height="550"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEc-w7-rxo">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="122.5"/>
+                                                <state key="normal" title="Button" image="Cama.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="Kzl-v5-TPp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiD-FL-Ir5">
+                                                <rect key="frame" x="0.0" y="142.5" width="101" height="122.5"/>
+                                                <state key="normal" title="Button" image="pantalon de mezclilla - hombre mujer.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="y7Y-Qw-NiP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1b-mF-AQ5">
+                                                <rect key="frame" x="0.0" y="285" width="101" height="122.5"/>
+                                                <state key="normal" title="Button" image="pantalon de vestir - hombre mujer.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="Ia3-AW-zr9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc2-TF-Hpl">
+                                                <rect key="frame" x="0.0" y="427.5" width="101" height="122.5"/>
+                                                <state key="normal" title="Button" image="zapatos.jpg"/>
+                                                <connections>
+                                                    <action selector="actionButton:" destination="dRD-90-LjK" eventType="touchUpInside" id="Ur0-t0-U9V"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="z2O-Zt-Dph"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mt9-4m-Jf4" firstAttribute="top" secondItem="1gA-d2-g77" secondAttribute="bottom" constant="8" symbolic="YES" id="4Sp-JB-e3l"/>
+                            <constraint firstItem="Mt9-4m-Jf4" firstAttribute="leading" secondItem="740-He-wMg" secondAttribute="leadingMargin" id="xSA-5r-WbN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mt9-4m-Jf4" secondAttribute="trailing" id="xYe-pT-oiI"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="De cama" id="YyE-TO-JHl"/>
+                    <navigationItem key="navigationItem" title="Ropero" id="YyE-TO-JHl"/>
                     <connections>
                         <outlet property="imageView" destination="vWx-RC-NNe" id="MpO-1Y-aeV"/>
                     </connections>
@@ -783,19 +1215,50 @@
         <image name="8.jpg" width="200" height="200"/>
         <image name="9.jpg" width="200" height="200"/>
         <image name="Aburrido.jpg" width="200" height="200"/>
+        <image name="Acostarse.jpg" width="200" height="200"/>
+        <image name="Afeitar.jpg" width="200" height="200"/>
         <image name="Amarillo.jpg" width="200" height="200"/>
+        <image name="Apaga la tele.jpg" width="200" height="200"/>
+        <image name="Beber.jpg" width="200" height="200"/>
+        <image name="Cama.jpg" width="200" height="200"/>
+        <image name="Comer.jpg" width="200" height="200"/>
+        <image name="DESNUDAR.jpg" width="200" height="200"/>
+        <image name="Dormir.jpg" width="200" height="200"/>
+        <image name="Duchar.jpg" width="200" height="200"/>
+        <image name="Enciende la tele.jpg" width="200" height="200"/>
         <image name="Enfermo-a.jpg" width="200" height="200"/>
         <image name="Enojado-a.jpg" width="200" height="200"/>
+        <image name="Frio.jpg" width="200" height="200"/>
+        <image name="Hablar.jpg" width="200" height="200"/>
+        <image name="Hacer la cama.jpg" width="200" height="200"/>
+        <image name="Jugar.jpg" width="200" height="200"/>
+        <image name="Lavar el pelo.jpg" width="200" height="200"/>
+        <image name="Lavar la cara.jpg" width="200" height="200"/>
+        <image name="Lavar los dientes.jpg" width="200" height="200"/>
+        <image name="Levantarse.jpg" width="200" height="200"/>
         <image name="Naranja.jpg" width="200" height="200"/>
+        <image name="No quiero.jpg" width="200" height="200"/>
+        <image name="No.jpg" width="200" height="200"/>
+        <image name="Pasear.jpg" width="200" height="200"/>
+        <image name="Quiero.jpg" width="200" height="200"/>
         <image name="Rojo.jpg" width="200" height="200"/>
         <image name="Rosa fuerte.jpg" width="200" height="200"/>
+        <image name="Sandalias.jpg" width="200" height="200"/>
+        <image name="Si.jpg" width="200" height="200"/>
+        <image name="Ver.JPG" width="96" height="114"/>
         <image name="Verde.jpg" width="200" height="200"/>
         <image name="averginzado-a.jpg" width="200" height="200"/>
         <image name="azul_cielo.jpg" width="200" height="200"/>
         <image name="azul_marino.jpg" width="200" height="200"/>
+        <image name="baño.jpg" width="200" height="200"/>
         <image name="blanco.jpg" width="200" height="200"/>
+        <image name="blusa.jpg" width="200" height="200"/>
         <image name="café.jpg" width="200" height="200"/>
+        <image name="calor.jpg" width="200" height="200"/>
+        <image name="camisa manga corta.jpg" width="200" height="200"/>
+        <image name="camisa manga larga.jpg" width="200" height="200"/>
         <image name="contento-a.jpg" width="200" height="200"/>
+        <image name="falda.jpg" width="200" height="200"/>
         <image name="fondo.jpg" width="578" height="483"/>
         <image name="fondo_form.jpg" width="578" height="483"/>
         <image name="icono-hombre.png" width="256" height="256"/>
@@ -804,9 +1267,18 @@
         <image name="morado.jpg" width="200" height="200"/>
         <image name="negro.jpg" width="200" height="200"/>
         <image name="nervioso.jpg" width="200" height="200"/>
+        <image name="pantalon de mezclilla - hombre mujer.jpg" width="200" height="200"/>
+        <image name="pantalon de vestir - hombre mujer.jpg" width="200" height="200"/>
+        <image name="playera.jpg" width="200" height="200"/>
+        <image name="shorts - mujer hombre.jpg" width="200" height="200"/>
+        <image name="tenis - hombremujer.jpg" width="200" height="200"/>
+        <image name="vestido.jpg" width="200" height="200"/>
+        <image name="zapatillas.jpg" width="200" height="200"/>
+        <image name="zapatos.jpg" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="pI6-th-X5d"/>
+        <segue reference="jpE-Lc-GUm"/>
         <segue reference="Jeg-fF-7cb"/>
-        <segue reference="MbB-ap-8ZD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -33,6 +33,45 @@
 		4A17C7BF1E65ADA500EF029F /* Rojo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A17C7B41E65ADA500EF029F /* Rojo.jpg */; };
 		4A17C7C01E65ADA500EF029F /* Rosa fuerte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A17C7B51E65ADA500EF029F /* Rosa fuerte.jpg */; };
 		4A17C7C11E65ADA500EF029F /* Verde.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A17C7B61E65ADA500EF029F /* Verde.jpg */; };
+		4A25ECCF1E882AE3007B0408 /* calor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECC91E882AE3007B0408 /* calor.jpg */; };
+		4A25ECD01E882AE3007B0408 /* Frio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECCA1E882AE3007B0408 /* Frio.jpg */; };
+		4A25ECD11E882AE3007B0408 /* No quiero.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECCB1E882AE3007B0408 /* No quiero.jpg */; };
+		4A25ECD21E882AE3007B0408 /* No.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECCC1E882AE3007B0408 /* No.jpg */; };
+		4A25ECD31E882AE3007B0408 /* Quiero.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECCD1E882AE3007B0408 /* Quiero.jpg */; };
+		4A25ECD41E882AE3007B0408 /* Si.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECCE1E882AE3007B0408 /* Si.jpg */; };
+		4A25ECEB1E882FA5007B0408 /* Acostarse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECD81E882FA5007B0408 /* Acostarse.jpg */; };
+		4A25ECEC1E882FA5007B0408 /* Afeitar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECD91E882FA5007B0408 /* Afeitar.jpg */; };
+		4A25ECED1E882FA5007B0408 /* Apaga la tele.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECDA1E882FA5007B0408 /* Apaga la tele.jpg */; };
+		4A25ECEE1E882FA5007B0408 /* baño.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECDB1E882FA5007B0408 /* baño.jpg */; };
+		4A25ECEF1E882FA5007B0408 /* Beber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECDC1E882FA5007B0408 /* Beber.jpg */; };
+		4A25ECF01E882FA5007B0408 /* Comer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECDD1E882FA5007B0408 /* Comer.jpg */; };
+		4A25ECF11E882FA5007B0408 /* DESNUDAR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECDE1E882FA5007B0408 /* DESNUDAR.jpg */; };
+		4A25ECF21E882FA5007B0408 /* Dormir.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECDF1E882FA5007B0408 /* Dormir.jpg */; };
+		4A25ECF31E882FA5007B0408 /* Duchar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE01E882FA5007B0408 /* Duchar.jpg */; };
+		4A25ECF41E882FA5007B0408 /* Enciende la tele.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE11E882FA5007B0408 /* Enciende la tele.jpg */; };
+		4A25ECF51E882FA5007B0408 /* Hablar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE21E882FA5007B0408 /* Hablar.jpg */; };
+		4A25ECF61E882FA5007B0408 /* Hacer la cama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE31E882FA5007B0408 /* Hacer la cama.jpg */; };
+		4A25ECF71E882FA5007B0408 /* Jugar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE41E882FA5007B0408 /* Jugar.jpg */; };
+		4A25ECF81E882FA5007B0408 /* Lavar el pelo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE51E882FA5007B0408 /* Lavar el pelo.jpg */; };
+		4A25ECF91E882FA5007B0408 /* Lavar la cara.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE61E882FA5007B0408 /* Lavar la cara.jpg */; };
+		4A25ECFA1E882FA5007B0408 /* Lavar los dientes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE71E882FA5007B0408 /* Lavar los dientes.jpg */; };
+		4A25ECFB1E882FA5007B0408 /* Levantarse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE81E882FA5007B0408 /* Levantarse.jpg */; };
+		4A25ECFC1E882FA5007B0408 /* Pasear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECE91E882FA5007B0408 /* Pasear.jpg */; };
+		4A25ECFD1E882FA5007B0408 /* Ver.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECEA1E882FA5007B0408 /* Ver.JPG */; };
+		4A25ED0D1E8842A9007B0408 /* blusa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ECFF1E8842A9007B0408 /* blusa.jpg */; };
+		4A25ED0E1E8842A9007B0408 /* Cama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED001E8842A9007B0408 /* Cama.jpg */; };
+		4A25ED0F1E8842A9007B0408 /* camisa manga corta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED011E8842A9007B0408 /* camisa manga corta.jpg */; };
+		4A25ED101E8842A9007B0408 /* camisa manga larga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED021E8842A9007B0408 /* camisa manga larga.jpg */; };
+		4A25ED111E8842A9007B0408 /* falda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED031E8842A9007B0408 /* falda.jpg */; };
+		4A25ED121E8842A9007B0408 /* pantalon de mezclilla - hombre mujer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED041E8842A9007B0408 /* pantalon de mezclilla - hombre mujer.jpg */; };
+		4A25ED131E8842A9007B0408 /* pantalon de vestir - hombre mujer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED051E8842A9007B0408 /* pantalon de vestir - hombre mujer.jpg */; };
+		4A25ED141E8842A9007B0408 /* playera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED061E8842A9007B0408 /* playera.jpg */; };
+		4A25ED151E8842A9007B0408 /* Sandalias.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED071E8842A9007B0408 /* Sandalias.jpg */; };
+		4A25ED161E8842A9007B0408 /* shorts - mujer hombre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED081E8842A9007B0408 /* shorts - mujer hombre.jpg */; };
+		4A25ED171E8842A9007B0408 /* tenis - hombremujer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED091E8842A9007B0408 /* tenis - hombremujer.jpg */; };
+		4A25ED181E8842A9007B0408 /* vestido.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED0A1E8842A9007B0408 /* vestido.jpg */; };
+		4A25ED191E8842A9007B0408 /* zapatillas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED0B1E8842A9007B0408 /* zapatillas.jpg */; };
+		4A25ED1A1E8842A9007B0408 /* zapatos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED0C1E8842A9007B0408 /* zapatos.jpg */; };
 		4A36BE6F1E64916500E70389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36BE6E1E64916500E70389 /* AppDelegate.swift */; };
 		4A36BE711E64916500E70389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36BE701E64916500E70389 /* ViewController.swift */; };
 		4A36BE741E64916500E70389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A36BE721E64916500E70389 /* Main.storyboard */; };
@@ -92,6 +131,45 @@
 		4A17C7B41E65ADA500EF029F /* Rojo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rojo.jpg; sourceTree = "<group>"; };
 		4A17C7B51E65ADA500EF029F /* Rosa fuerte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rosa fuerte.jpg"; sourceTree = "<group>"; };
 		4A17C7B61E65ADA500EF029F /* Verde.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Verde.jpg; sourceTree = "<group>"; };
+		4A25ECC91E882AE3007B0408 /* calor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = calor.jpg; path = Basico/calor.jpg; sourceTree = "<group>"; };
+		4A25ECCA1E882AE3007B0408 /* Frio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Frio.jpg; path = Basico/Frio.jpg; sourceTree = "<group>"; };
+		4A25ECCB1E882AE3007B0408 /* No quiero.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "No quiero.jpg"; path = "Basico/No quiero.jpg"; sourceTree = "<group>"; };
+		4A25ECCC1E882AE3007B0408 /* No.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = No.jpg; path = Basico/No.jpg; sourceTree = "<group>"; };
+		4A25ECCD1E882AE3007B0408 /* Quiero.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Quiero.jpg; path = Basico/Quiero.jpg; sourceTree = "<group>"; };
+		4A25ECCE1E882AE3007B0408 /* Si.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Si.jpg; path = Basico/Si.jpg; sourceTree = "<group>"; };
+		4A25ECD81E882FA5007B0408 /* Acostarse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Acostarse.jpg; sourceTree = "<group>"; };
+		4A25ECD91E882FA5007B0408 /* Afeitar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Afeitar.jpg; sourceTree = "<group>"; };
+		4A25ECDA1E882FA5007B0408 /* Apaga la tele.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Apaga la tele.jpg"; sourceTree = "<group>"; };
+		4A25ECDB1E882FA5007B0408 /* baño.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "baño.jpg"; sourceTree = "<group>"; };
+		4A25ECDC1E882FA5007B0408 /* Beber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Beber.jpg; sourceTree = "<group>"; };
+		4A25ECDD1E882FA5007B0408 /* Comer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Comer.jpg; sourceTree = "<group>"; };
+		4A25ECDE1E882FA5007B0408 /* DESNUDAR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DESNUDAR.jpg; sourceTree = "<group>"; };
+		4A25ECDF1E882FA5007B0408 /* Dormir.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dormir.jpg; sourceTree = "<group>"; };
+		4A25ECE01E882FA5007B0408 /* Duchar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Duchar.jpg; sourceTree = "<group>"; };
+		4A25ECE11E882FA5007B0408 /* Enciende la tele.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Enciende la tele.jpg"; sourceTree = "<group>"; };
+		4A25ECE21E882FA5007B0408 /* Hablar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hablar.jpg; sourceTree = "<group>"; };
+		4A25ECE31E882FA5007B0408 /* Hacer la cama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Hacer la cama.jpg"; sourceTree = "<group>"; };
+		4A25ECE41E882FA5007B0408 /* Jugar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jugar.jpg; sourceTree = "<group>"; };
+		4A25ECE51E882FA5007B0408 /* Lavar el pelo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lavar el pelo.jpg"; sourceTree = "<group>"; };
+		4A25ECE61E882FA5007B0408 /* Lavar la cara.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lavar la cara.jpg"; sourceTree = "<group>"; };
+		4A25ECE71E882FA5007B0408 /* Lavar los dientes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lavar los dientes.jpg"; sourceTree = "<group>"; };
+		4A25ECE81E882FA5007B0408 /* Levantarse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Levantarse.jpg; sourceTree = "<group>"; };
+		4A25ECE91E882FA5007B0408 /* Pasear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pasear.jpg; sourceTree = "<group>"; };
+		4A25ECEA1E882FA5007B0408 /* Ver.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ver.JPG; sourceTree = "<group>"; };
+		4A25ECFF1E8842A9007B0408 /* blusa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blusa.jpg; sourceTree = "<group>"; };
+		4A25ED001E8842A9007B0408 /* Cama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cama.jpg; sourceTree = "<group>"; };
+		4A25ED011E8842A9007B0408 /* camisa manga corta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "camisa manga corta.jpg"; sourceTree = "<group>"; };
+		4A25ED021E8842A9007B0408 /* camisa manga larga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "camisa manga larga.jpg"; sourceTree = "<group>"; };
+		4A25ED031E8842A9007B0408 /* falda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = falda.jpg; sourceTree = "<group>"; };
+		4A25ED041E8842A9007B0408 /* pantalon de mezclilla - hombre mujer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pantalon de mezclilla - hombre mujer.jpg"; sourceTree = "<group>"; };
+		4A25ED051E8842A9007B0408 /* pantalon de vestir - hombre mujer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pantalon de vestir - hombre mujer.jpg"; sourceTree = "<group>"; };
+		4A25ED061E8842A9007B0408 /* playera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = playera.jpg; sourceTree = "<group>"; };
+		4A25ED071E8842A9007B0408 /* Sandalias.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sandalias.jpg; sourceTree = "<group>"; };
+		4A25ED081E8842A9007B0408 /* shorts - mujer hombre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shorts - mujer hombre.jpg"; sourceTree = "<group>"; };
+		4A25ED091E8842A9007B0408 /* tenis - hombremujer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tenis - hombremujer.jpg"; sourceTree = "<group>"; };
+		4A25ED0A1E8842A9007B0408 /* vestido.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vestido.jpg; sourceTree = "<group>"; };
+		4A25ED0B1E8842A9007B0408 /* zapatillas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zapatillas.jpg; sourceTree = "<group>"; };
+		4A25ED0C1E8842A9007B0408 /* zapatos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zapatos.jpg; sourceTree = "<group>"; };
 		4A36BE6B1E64916500E70389 /* speakBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speakBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A36BE6E1E64916500E70389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A36BE701E64916500E70389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +250,66 @@
 			name = Colores;
 			sourceTree = "<group>";
 		};
+		4A25ECD51E882AEE007B0408 /* Basico */ = {
+			isa = PBXGroup;
+			children = (
+				4A25ECC91E882AE3007B0408 /* calor.jpg */,
+				4A25ECCA1E882AE3007B0408 /* Frio.jpg */,
+				4A25ECCB1E882AE3007B0408 /* No quiero.jpg */,
+				4A25ECCC1E882AE3007B0408 /* No.jpg */,
+				4A25ECCD1E882AE3007B0408 /* Quiero.jpg */,
+				4A25ECCE1E882AE3007B0408 /* Si.jpg */,
+			);
+			name = Basico;
+			sourceTree = "<group>";
+		};
+		4A25ECFE1E882FAD007B0408 /* Acciones */ = {
+			isa = PBXGroup;
+			children = (
+				4A25ECD81E882FA5007B0408 /* Acostarse.jpg */,
+				4A25ECD91E882FA5007B0408 /* Afeitar.jpg */,
+				4A25ECDA1E882FA5007B0408 /* Apaga la tele.jpg */,
+				4A25ECDB1E882FA5007B0408 /* baño.jpg */,
+				4A25ECDC1E882FA5007B0408 /* Beber.jpg */,
+				4A25ECDD1E882FA5007B0408 /* Comer.jpg */,
+				4A25ECDE1E882FA5007B0408 /* DESNUDAR.jpg */,
+				4A25ECDF1E882FA5007B0408 /* Dormir.jpg */,
+				4A25ECE01E882FA5007B0408 /* Duchar.jpg */,
+				4A25ECE11E882FA5007B0408 /* Enciende la tele.jpg */,
+				4A25ECE21E882FA5007B0408 /* Hablar.jpg */,
+				4A25ECE31E882FA5007B0408 /* Hacer la cama.jpg */,
+				4A25ECE41E882FA5007B0408 /* Jugar.jpg */,
+				4A25ECE51E882FA5007B0408 /* Lavar el pelo.jpg */,
+				4A25ECE61E882FA5007B0408 /* Lavar la cara.jpg */,
+				4A25ECE71E882FA5007B0408 /* Lavar los dientes.jpg */,
+				4A25ECE81E882FA5007B0408 /* Levantarse.jpg */,
+				4A25ECE91E882FA5007B0408 /* Pasear.jpg */,
+				4A25ECEA1E882FA5007B0408 /* Ver.JPG */,
+			);
+			name = Acciones;
+			sourceTree = "<group>";
+		};
+		4A25ED1B1E8842B5007B0408 /* Ropa */ = {
+			isa = PBXGroup;
+			children = (
+				4A25ECFF1E8842A9007B0408 /* blusa.jpg */,
+				4A25ED001E8842A9007B0408 /* Cama.jpg */,
+				4A25ED011E8842A9007B0408 /* camisa manga corta.jpg */,
+				4A25ED021E8842A9007B0408 /* camisa manga larga.jpg */,
+				4A25ED031E8842A9007B0408 /* falda.jpg */,
+				4A25ED041E8842A9007B0408 /* pantalon de mezclilla - hombre mujer.jpg */,
+				4A25ED051E8842A9007B0408 /* pantalon de vestir - hombre mujer.jpg */,
+				4A25ED061E8842A9007B0408 /* playera.jpg */,
+				4A25ED071E8842A9007B0408 /* Sandalias.jpg */,
+				4A25ED081E8842A9007B0408 /* shorts - mujer hombre.jpg */,
+				4A25ED091E8842A9007B0408 /* tenis - hombremujer.jpg */,
+				4A25ED0A1E8842A9007B0408 /* vestido.jpg */,
+				4A25ED0B1E8842A9007B0408 /* zapatillas.jpg */,
+				4A25ED0C1E8842A9007B0408 /* zapatos.jpg */,
+			);
+			name = Ropa;
+			sourceTree = "<group>";
+		};
 		4A36BE621E64916500E70389 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +352,9 @@
 				4A36BEAB1E65657E00E70389 /* JH */,
 				4A36BEAD1E65657E00E70389 /* NM */,
 				4A36BEAE1E65657E00E70389 /* NH */,
+				4A25ED1B1E8842B5007B0408 /* Ropa */,
+				4A25ECFE1E882FAD007B0408 /* Acciones */,
+				4A25ECD51E882AEE007B0408 /* Basico */,
 				4A17C7C21E65ADAD00EF029F /* Colores */,
 				4A36BEA81E6557A700E70389 /* EmocionesImages */,
 				4A17C7AB1E65A58100EF029F /* Numeros */,
@@ -310,47 +451,86 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A36BEB41E65657E00E70389 /* NH in Resources */,
+				4A25ECF61E882FA5007B0408 /* Hacer la cama.jpg in Resources */,
 				4A36BEAF1E65657E00E70389 /* AM in Resources */,
+				4A25ECD01E882AE3007B0408 /* Frio.jpg in Resources */,
 				4A36BEA71E65579F00E70389 /* nervioso.jpg in Resources */,
+				4A25ECD11E882AE3007B0408 /* No quiero.jpg in Resources */,
 				4A17C7BE1E65ADA500EF029F /* negro.jpg in Resources */,
 				4A36BEA21E65579F00E70389 /* averginzado-a.jpg in Resources */,
+				4A25ECFC1E882FA5007B0408 /* Pasear.jpg in Resources */,
+				4A25ECCF1E882AE3007B0408 /* calor.jpg in Resources */,
 				4A17C7BA1E65ADA500EF029F /* blanco.jpg in Resources */,
 				4A17C7C11E65ADA500EF029F /* Verde.jpg in Resources */,
+				4A25ECF81E882FA5007B0408 /* Lavar el pelo.jpg in Resources */,
 				4A17C7BF1E65ADA500EF029F /* Rojo.jpg in Resources */,
 				4A36BE8E1E64929000E70389 /* icono-mujer.png in Resources */,
 				4A17C7B81E65ADA500EF029F /* azul_cielo.jpg in Resources */,
+				4A25ED111E8842A9007B0408 /* falda.jpg in Resources */,
 				4A36BEA11E65579F00E70389 /* Aburrido.jpg in Resources */,
+				4A25ED0E1E8842A9007B0408 /* Cama.jpg in Resources */,
+				4A25ECF01E882FA5007B0408 /* Comer.jpg in Resources */,
+				4A25ECD31E882AE3007B0408 /* Quiero.jpg in Resources */,
 				4A17C7A51E65A57B00EF029F /* 4.jpg in Resources */,
+				4A25ECEC1E882FA5007B0408 /* Afeitar.jpg in Resources */,
+				4A25ECED1E882FA5007B0408 /* Apaga la tele.jpg in Resources */,
+				4A25ECD21E882AE3007B0408 /* No.jpg in Resources */,
+				4A25ECFD1E882FA5007B0408 /* Ver.JPG in Resources */,
+				4A25ECEE1E882FA5007B0408 /* baño.jpg in Resources */,
 				4A36BEB11E65657E00E70389 /* JH in Resources */,
 				4A17C7A11E65A57B00EF029F /* 0.jpg in Resources */,
 				4A36BEB31E65657E00E70389 /* NM in Resources */,
+				4A25ECF91E882FA5007B0408 /* Lavar la cara.jpg in Resources */,
 				4A36BE7C1E64916500E70389 /* LaunchScreen.storyboard in Resources */,
 				4A36BE8B1E64929000E70389 /* fondo_mujeres.jpg in Resources */,
+				4A25ED191E8842A9007B0408 /* zapatillas.jpg in Resources */,
 				4A17C7BD1E65ADA500EF029F /* Naranja.jpg in Resources */,
+				4A25ED0D1E8842A9007B0408 /* blusa.jpg in Resources */,
 				4A36BEB21E65657E00E70389 /* JM in Resources */,
 				4A17C7AA1E65A57B00EF029F /* 9.jpg in Resources */,
+				4A25ED1A1E8842A9007B0408 /* zapatos.jpg in Resources */,
+				4A25ED151E8842A9007B0408 /* Sandalias.jpg in Resources */,
 				4A36BEB01E65657E00E70389 /* AH in Resources */,
+				4A25ED131E8842A9007B0408 /* pantalon de vestir - hombre mujer.jpg in Resources */,
+				4A25ED181E8842A9007B0408 /* vestido.jpg in Resources */,
+				4A25ECF41E882FA5007B0408 /* Enciende la tele.jpg in Resources */,
+				4A25ECF31E882FA5007B0408 /* Duchar.jpg in Resources */,
 				4A36BEA61E65579F00E70389 /* mareado.jpg in Resources */,
 				4A17C7BB1E65ADA500EF029F /* café.jpg in Resources */,
 				4A17C7BC1E65ADA500EF029F /* morado.jpg in Resources */,
 				4A36BEA31E65579F00E70389 /* contento-a.jpg in Resources */,
 				4A36BEA51E65579F00E70389 /* Enojado-a.jpg in Resources */,
+				4A25ECFB1E882FA5007B0408 /* Levantarse.jpg in Resources */,
+				4A25ED171E8842A9007B0408 /* tenis - hombremujer.jpg in Resources */,
 				4A17C7B71E65ADA500EF029F /* Amarillo.jpg in Resources */,
+				4A25ED101E8842A9007B0408 /* camisa manga larga.jpg in Resources */,
 				4A36BE791E64916500E70389 /* Assets.xcassets in Resources */,
 				4A17C7A41E65A57B00EF029F /* 3.jpg in Resources */,
 				4A36BE8A1E64929000E70389 /* fondo_hombres.jpg in Resources */,
 				4A36BE741E64916500E70389 /* Main.storyboard in Resources */,
 				4A36BE8D1E64929000E70389 /* icono-hombre.png in Resources */,
+				4A25ECF11E882FA5007B0408 /* DESNUDAR.jpg in Resources */,
+				4A25ECF21E882FA5007B0408 /* Dormir.jpg in Resources */,
 				4A36BE891E64929000E70389 /* fondo_form.jpg in Resources */,
+				4A25ECFA1E882FA5007B0408 /* Lavar los dientes.jpg in Resources */,
+				4A25ED0F1E8842A9007B0408 /* camisa manga corta.jpg in Resources */,
+				4A25ECF71E882FA5007B0408 /* Jugar.jpg in Resources */,
+				4A25ED121E8842A9007B0408 /* pantalon de mezclilla - hombre mujer.jpg in Resources */,
 				4A17C7B91E65ADA500EF029F /* azul_marino.jpg in Resources */,
 				4A17C7A21E65A57B00EF029F /* 1.jpg in Resources */,
 				4A17C7A31E65A57B00EF029F /* 2.jpg in Resources */,
+				4A25ECD41E882AE3007B0408 /* Si.jpg in Resources */,
 				4A17C7A91E65A57B00EF029F /* 8.jpg in Resources */,
+				4A25ECF51E882FA5007B0408 /* Hablar.jpg in Resources */,
 				4A17C7C01E65ADA500EF029F /* Rosa fuerte.jpg in Resources */,
 				4A17C7A61E65A57B00EF029F /* 5.jpg in Resources */,
+				4A25ED161E8842A9007B0408 /* shorts - mujer hombre.jpg in Resources */,
+				4A25ECEB1E882FA5007B0408 /* Acostarse.jpg in Resources */,
 				4A36BEA41E65579F00E70389 /* Enfermo-a.jpg in Resources */,
 				4A17C7A81E65A57B00EF029F /* 7.jpg in Resources */,
+				4A25ED141E8842A9007B0408 /* playera.jpg in Resources */,
 				4A36BE8C1E64929000E70389 /* fondo.jpg in Resources */,
+				4A25ECEF1E882FA5007B0408 /* Beber.jpg in Resources */,
 				4A17C7A71E65A57B00EF029F /* 6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

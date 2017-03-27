@@ -21,7 +21,7 @@ class TeleViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func actionButton(_ sender: AnyObject) {
-        print("Button: \(sender.tag)")
+        //print("Button: \(sender.tag)")
         switch sender.tag {
         case 0:
             nameAudio = "Amarillo"
@@ -124,11 +124,12 @@ class TeleViewController: UIViewController {
         do{
             player = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: nameAudio, ofType: "mp3", inDirectory: audioRoot)!))
             player.prepareToPlay()
+            player.play()
         }
         catch let error as NSError {
             print("Audio error : \(error) \(error.userInfo)")
         }
-        player.play()
+        
     }
 
 }

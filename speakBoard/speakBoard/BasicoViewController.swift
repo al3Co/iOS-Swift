@@ -8,15 +8,39 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class BasicoViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
-    
+    var player:AVAudioPlayer = AVAudioPlayer()
     var generoselection:Int = 0
     var edadSelection:Int = 0
+    var audioRoot:String = ""
+    var nameAudio:String = ""
     
-
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func actionButton(_ sender: AnyObject) {
+        print("Button: \(sender.tag.description)")
+        switch sender.tag {
+        case 0:
+            nameAudio = "Calor"
+        case 1:
+            nameAudio = "Frio"
+        case 2:
+            nameAudio = "Si"
+        case 3:
+            nameAudio = "No"
+        case 4:
+            nameAudio = "Quiero"
+        case 5:
+            nameAudio = "No Quiero"
+        default:
+            nameAudio = "Calor"
+        }
+        playAudioPlayer()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewData()
@@ -26,7 +50,7 @@ class BasicoViewController: UIViewController {
         else{
             imageView.image = UIImage(named: "fondo_mujeres.jpg")
         }
-
+        selectorFolder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,6 +88,37 @@ class BasicoViewController: UIViewController {
         catch let error as NSError {
             print("Reviewing genero error : \(error) \(error.userInfo)")
         }
+    }
+    
+    func selectorFolder(){
+        if (edadSelection == 1){
+            audioRoot = "J"
+        }
+        else if (edadSelection == 2){
+            audioRoot = "J"
+        }
+        else if (edadSelection == 3){
+            audioRoot = "A"
+        }
+        if (generoselection == 1){
+            audioRoot = audioRoot + "H"
+        }
+        else if (generoselection == 2){
+            audioRoot = audioRoot + "M"
+        }
+        print(audioRoot)
+    }
+    
+    func playAudioPlayer(){
+        do{
+            player = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: nameAudio, ofType: "mp3", inDirectory: audioRoot)!))
+            player.prepareToPlay()
+            player.play()
+        }
+        catch let error as NSError {
+            print("Audio error : \(error) \(error.userInfo)")
+        }
+        
     }
 
 }

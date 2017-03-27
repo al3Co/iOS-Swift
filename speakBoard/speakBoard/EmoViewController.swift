@@ -115,10 +115,11 @@ class EmoViewController: UIViewController {
         do{
             player = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: nameAudio, ofType: "mp3", inDirectory: audioRoot)!))
             player.prepareToPlay()
+            player.play()
         }
         catch let error as NSError {
             print("Audio error : \(error) \(error.userInfo)")
         }
-        player.play()
+        
     }
 }
