@@ -22,14 +22,17 @@ class EdadViewController: UIViewController {
     @IBAction func chicoButton(_ sender: Any) {
         edadSelection = 1
         storeData()
+        performSegue(withIdentifier: "edadToSelec", sender: nil)
     }
     @IBAction func adolescenteButton(_ sender: Any) {
         edadSelection = 2
         storeData()
+        performSegue(withIdentifier: "edadToSelec", sender: nil)
     }
     @IBAction func grandeButton(_ sender: Any) {
         edadSelection = 3
         storeData()
+        performSegue(withIdentifier: "edadToSelec", sender: nil)
     }
     override func viewDidAppear(_ animated: Bool) {
         edadSelection = 0

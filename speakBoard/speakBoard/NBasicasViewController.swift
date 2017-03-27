@@ -19,6 +19,13 @@ class NBasicasViewController: UIViewController {
     @IBOutlet weak var edadLabel: UILabel!
     @IBOutlet weak var NBasicOButton: UIButton!
     @IBOutlet weak var EmoOButton: UIButton!
+    @IBOutlet weak var inicioOButton: UIButton!
+    
+    
+    @IBAction func inicioActionButton(_ sender: Any) {
+        self.navigationController!.popToRootViewController(animated: true)
+    }
+    
     
     
     override func viewDidLoad() {
@@ -29,12 +36,21 @@ class NBasicasViewController: UIViewController {
             generoLabel.text = "Hombre"
             NBasicOButton.backgroundColor = UIColor.blue
             EmoOButton.backgroundColor = UIColor.blue
+            inicioOButton.backgroundColor = UIColor.blue
         }
-        else{
+        else if(generoselection == 2){
             imagenView.image = UIImage(named: "fondo_mujeres.jpg")
             generoLabel.text = "Mujer"
             NBasicOButton.backgroundColor = UIColor.purple
             EmoOButton.backgroundColor = UIColor.purple
+            inicioOButton.backgroundColor = UIColor.purple
+        }
+        else{
+            imagenView.image = UIImage(named: "fondo_mujeres.jpg")
+            generoLabel.text = "Sin genero: \(generoselection)"
+            NBasicOButton.backgroundColor = UIColor.purple
+            EmoOButton.backgroundColor = UIColor.purple
+            inicioOButton.backgroundColor = UIColor.purple
         }
         if (edadSelection == 1){
             edadLabel.text = "De 3 - 13 años"
@@ -46,8 +62,10 @@ class NBasicasViewController: UIViewController {
             edadLabel.text = "De 24 - adelante"
         }
         else{
-            edadLabel.text = "error en algo \(edadSelection)"
+            edadLabel.text = "Sin edad: \(edadSelection)"
         }
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

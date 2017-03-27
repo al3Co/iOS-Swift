@@ -14,14 +14,16 @@ class ViewController: UIViewController {
     var generoselection:Int = 0
     var edadSelection:Int = 0
     
-    let a = 1
-    
     @IBAction func startButton(_ sender: AnyObject!) {
-        if (generoselection != 0 && edadSelection != 0){
-            performSegue(withIdentifier: "Selecciona", sender: sender)
-        } else{
+        reviewData()
+        print("edad: \(edadSelection)")
+        print("genero: \(generoselection)")
+        if (generoselection == 0 || edadSelection == 0){
             performSegue(withIdentifier: "Genero", sender: sender)
+        } else{
+            performSegue(withIdentifier: "Selecciona", sender: sender)
         }
+        createAlert(title: "Audio", message: "No olvides activar el audio en tu dispositivo")
     }
     
 
@@ -69,8 +71,18 @@ class ViewController: UIViewController {
         catch let error as NSError {
             print("Reviewing genero error : \(error) \(error.userInfo)")
         }
-        print("edad: \(edadSelection)")
-        print("genero: \(generoselection)")
+    }
+    
+    func createAlert (title:String, message:String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        //CREATING ON BUTTON
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print ("Audio OK")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

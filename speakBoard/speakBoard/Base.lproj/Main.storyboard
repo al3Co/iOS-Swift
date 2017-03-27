@@ -86,7 +86,7 @@
                                 <rect key="frame" x="16" y="72" width="343" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Objetivo: Implementar una aplicación que facilite la comunicación vía sonido para personas con cualquier limitación o trastorno de habla. Las personas  con discapacidad de aprendizaje basada en lenguaje también podrían ayudarse de ésta aplicación pero no del todo, por el hecho de que personas con esta discapacidad pueden tener más dificultades en otras áreas que solo en el habla, creando situaciones más específicas en su tratamiento.                                                                                 Contacto: Eduardo Contreras                    ingelalito@gmail.com                           Programación: Aldo Contreras</mutableString>
+                                <string key="text">Objetivo: Implementar una aplicación que facilite la comunicación vía sonido para personas con cualquier limitación o trastorno de habla. Las personas  con discapacidad de aprendizaje basada en lenguaje también podrían ayudarse de ésta aplicación pero no del todo, por el hecho de que personas con esta discapacidad pueden tener más dificultades en otras áreas que solo en el habla, creando situaciones más específicas en su tratamiento.                                                                                 Contacto: Eduardo Contreras                    ingelalito@gmail.com                           Programación: Aldo Contreras</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -222,7 +222,6 @@
                                 </state>
                                 <connections>
                                     <action selector="chicoButton:" destination="KQn-PP-Nvt" eventType="touchUpInside" id="haM-tL-ntV"/>
-                                    <segue destination="Jhm-Zt-dxA" kind="show" id="CWb-FD-394"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4j-Uq-UfN">
@@ -234,7 +233,6 @@
                                 </state>
                                 <connections>
                                     <action selector="adolescenteButton:" destination="KQn-PP-Nvt" eventType="touchUpInside" id="mav-k0-fpU"/>
-                                    <segue destination="Jhm-Zt-dxA" kind="show" identifier="Selecciona" id="9e6-8B-YaP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K13-rZ-Dem">
@@ -246,7 +244,6 @@
                                 </state>
                                 <connections>
                                     <action selector="grandeButton:" destination="KQn-PP-Nvt" eventType="touchUpInside" id="XqK-Nn-7IT"/>
-                                    <segue destination="Jhm-Zt-dxA" kind="show" id="MbB-ap-8ZD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -258,6 +255,7 @@
                         <outlet property="chicoOButton" destination="40L-Id-Yc4" id="VbP-fH-iBc"/>
                         <outlet property="grandeOButton" destination="K13-rZ-Dem" id="PTM-pR-Aok"/>
                         <outlet property="imagenView" destination="rlI-D9-fjm" id="cxs-Sd-pmV"/>
+                        <segue destination="Jhm-Zt-dxA" kind="show" identifier="edadToSelec" id="pMx-TL-Fho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sd4-l1-om0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,7 +281,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUt-qz-LQC">
                                 <rect key="frame" x="189" y="72" width="170" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -299,9 +297,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KED-7o-NSf">
-                                <rect key="frame" x="16" y="71" width="90" height="21"/>
+                                <rect key="frame" x="16" y="71" width="143" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -316,6 +314,17 @@
                                     <segue destination="5Vs-Ao-rhr" kind="show" id="5NE-0I-WCu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-0H-hQv">
+                                <rect key="frame" x="141" y="530" width="92" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Inicio">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="inicioActionButton:" destination="Jhm-Zt-dxA" eventType="touchUpInside" id="cEN-dA-9qu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -326,6 +335,7 @@
                         <outlet property="edadLabel" destination="vUt-qz-LQC" id="dTb-rH-mdl"/>
                         <outlet property="generoLabel" destination="KED-7o-NSf" id="DeI-o5-XL6"/>
                         <outlet property="imagenView" destination="e8u-c3-ykP" id="h46-A3-IkQ"/>
+                        <outlet property="inicioOButton" destination="K1b-0H-hQv" id="qSa-Ih-dUt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Uh-dD-Ga1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1277,8 +1287,8 @@
         <image name="zapatos.jpg" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pI6-th-X5d"/>
-        <segue reference="jpE-Lc-GUm"/>
+        <segue reference="pMx-TL-Fho"/>
         <segue reference="Jeg-fF-7cb"/>
+        <segue reference="Gc6-6P-kZ9"/>
     </inferredMetricsTieBreakers>
 </document>
