@@ -30,7 +30,7 @@
         <!--Configuración-->
         <scene sceneID="LfL-87-eRW">
             <objects>
-                <viewController id="Bs4-kA-wzT" sceneMemberID="viewController">
+                <viewController id="Bs4-kA-wzT" customClass="ConfiguraViewController" customModule="speakBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lZd-Ic-HHS"/>
                         <viewControllerLayoutGuide type="bottom" id="5Ci-46-Oq2"/>
@@ -39,28 +39,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NG-XU-Gpw">
-                                <rect key="frame" x="16" y="151" width="343" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hkL-CB-bXm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Cambiar Género y Edad">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NG-XU-Gpw">
+                                <rect key="frame" x="16" y="141" width="343" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" backgroundImage="Cambier_genero.png">
+                                    <color key="titleColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="3DY-Mz-vbm" kind="show" id="jpE-Lc-GUm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiI-kG-fcR">
-                                <rect key="frame" x="121" y="484" width="132" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8P-4A-1TA">
+                                <rect key="frame" x="105" y="433" width="164" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Créditos">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" backgroundImage="share-button.jpg">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButton:" destination="Bs4-kA-wzT" eventType="touchUpInside" id="kCa-qM-VCr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiI-kG-fcR">
+                                <rect key="frame" x="121" y="318" width="132" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Créditos" backgroundImage="fondo_form.jpg">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Mbc-6J-D79" kind="show" id="nD4-C2-QNX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cambiar Género y Edad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txe-FP-5gh">
+                                <rect key="frame" x="91" y="112" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Compartir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsH-XK-ZFX">
+                                <rect key="frame" x="91" y="404" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -82,10 +113,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kfD-p2-bfn">
-                                <rect key="frame" x="16" y="72" width="343" height="384"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="s1e-D8-1WZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kfD-p2-bfn">
+                                <rect key="frame" x="16" y="117" width="343" height="384"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Objetivo: Implementar una aplicación que facilite la comunicación vía sonido para personas con cualquier limitación o trastorno de habla. Las personas  con discapacidad de aprendizaje basada en lenguaje también podrían ayudarse de ésta aplicación pero no del todo, por el hecho de que personas con esta discapacidad pueden tener más dificultades en otras áreas que solo en el habla, creando situaciones más específicas en su tratamiento.                                                                                 Contacto: Eduardo Contreras                    ingelalito@gmail.com                           Programación: Aldo Contreras</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -138,7 +172,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Speak Board" id="eUy-Cn-6UW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="51b-hB-98k">
+                        <barButtonItem key="rightBarButtonItem" title="Opciones" id="51b-hB-98k">
                             <connections>
                                 <segue destination="Bs4-kA-wzT" kind="show" id="Jke-iI-Fhi"/>
                             </connections>
@@ -1231,6 +1265,7 @@
         <image name="Apaga la tele.jpg" width="200" height="200"/>
         <image name="Beber.jpg" width="200" height="200"/>
         <image name="Cama.jpg" width="200" height="200"/>
+        <image name="Cambier_genero.png" width="472" height="374"/>
         <image name="Comer.jpg" width="200" height="200"/>
         <image name="DESNUDAR.jpg" width="200" height="200"/>
         <image name="Dormir.jpg" width="200" height="200"/>
@@ -1280,6 +1315,7 @@
         <image name="pantalon de mezclilla - hombre mujer.jpg" width="200" height="200"/>
         <image name="pantalon de vestir - hombre mujer.jpg" width="200" height="200"/>
         <image name="playera.jpg" width="200" height="200"/>
+        <image name="share-button.jpg" width="580" height="207"/>
         <image name="shorts - mujer hombre.jpg" width="200" height="200"/>
         <image name="tenis - hombremujer.jpg" width="200" height="200"/>
         <image name="vestido.jpg" width="200" height="200"/>
@@ -1287,8 +1323,8 @@
         <image name="zapatos.jpg" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pMx-TL-Fho"/>
         <segue reference="Jeg-fF-7cb"/>
-        <segue reference="Gc6-6P-kZ9"/>
+        <segue reference="jpE-Lc-GUm"/>
+        <segue reference="pI6-th-X5d"/>
     </inferredMetricsTieBreakers>
 </document>

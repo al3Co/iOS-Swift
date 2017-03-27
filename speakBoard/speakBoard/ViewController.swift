@@ -23,13 +23,13 @@ class ViewController: UIViewController {
         } else{
             performSegue(withIdentifier: "Selecciona", sender: sender)
         }
-        createAlert(title: "Audio", message: "No olvides activar el audio en tu dispositivo")
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewData()
+        createAlert(title: "Audio", message: "No olvides activar el audio en tu dispositivo")
         // Do any additional setup after loading the view, typically from a nib.
     }
 

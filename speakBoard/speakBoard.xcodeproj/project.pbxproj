@@ -102,6 +102,10 @@
 		4A36BEB21E65657E00E70389 /* JM in Resources */ = {isa = PBXBuildFile; fileRef = 4A36BEAC1E65657E00E70389 /* JM */; };
 		4A36BEB31E65657E00E70389 /* NM in Resources */ = {isa = PBXBuildFile; fileRef = 4A36BEAD1E65657E00E70389 /* NM */; };
 		4A36BEB41E65657E00E70389 /* NH in Resources */ = {isa = PBXBuildFile; fileRef = 4A36BEAE1E65657E00E70389 /* NH */; };
+		4A7B03AC1E89638400E04363 /* ConfiguraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B03AB1E89638400E04363 /* ConfiguraViewController.swift */; };
+		4A7B03AE1E89641D00E04363 /* share-button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B03AD1E89641D00E04363 /* share-button.jpg */; };
+		4A7B03B01E89661F00E04363 /* icon_Speak.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B03AF1E89661F00E04363 /* icon_Speak.png */; };
+		4A7B03B21E896BCB00E04363 /* Cambier_genero.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B03B11E896BCB00E04363 /* Cambier_genero.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +206,10 @@
 		4A36BEAC1E65657E00E70389 /* JM */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JM; sourceTree = "<group>"; };
 		4A36BEAD1E65657E00E70389 /* NM */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NM; sourceTree = "<group>"; };
 		4A36BEAE1E65657E00E70389 /* NH */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NH; sourceTree = "<group>"; };
+		4A7B03AB1E89638400E04363 /* ConfiguraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguraViewController.swift; sourceTree = "<group>"; };
+		4A7B03AD1E89641D00E04363 /* share-button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "share-button.jpg"; sourceTree = "<group>"; };
+		4A7B03AF1E89661F00E04363 /* icon_Speak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_Speak.png; sourceTree = "<group>"; };
+		4A7B03B11E896BCB00E04363 /* Cambier_genero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cambier_genero.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +349,7 @@
 				4A17C77C1E65A15300EF029F /* CamaViewController.swift */,
 				4A17C77E1E65A17500EF029F /* ColoresViewController.swift */,
 				4A17C7801E65A1BA00EF029F /* NumerosViewController.swift */,
+				4A7B03AB1E89638400E04363 /* ConfiguraViewController.swift */,
 				4A36BE721E64916500E70389 /* Main.storyboard */,
 				4A36BE781E64916500E70389 /* Assets.xcassets */,
 				4A36BE7A1E64916500E70389 /* LaunchScreen.storyboard */,
@@ -366,10 +375,13 @@
 		4A36BE8F1E64929B00E70389 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4A7B03B11E896BCB00E04363 /* Cambier_genero.png */,
+				4A7B03AD1E89641D00E04363 /* share-button.jpg */,
 				4A36BE831E64929000E70389 /* fondo_form.jpg */,
 				4A36BE841E64929000E70389 /* fondo_hombres.jpg */,
 				4A36BE851E64929000E70389 /* fondo_mujeres.jpg */,
 				4A36BE861E64929000E70389 /* fondo.jpg */,
+				4A7B03AF1E89661F00E04363 /* icon_Speak.png */,
 				4A36BE871E64929000E70389 /* icono-hombre.png */,
 				4A36BE881E64929000E70389 /* icono-mujer.png */,
 			);
@@ -492,6 +504,7 @@
 				4A25ED151E8842A9007B0408 /* Sandalias.jpg in Resources */,
 				4A36BEB01E65657E00E70389 /* AH in Resources */,
 				4A25ED131E8842A9007B0408 /* pantalon de vestir - hombre mujer.jpg in Resources */,
+				4A7B03B21E896BCB00E04363 /* Cambier_genero.png in Resources */,
 				4A25ED181E8842A9007B0408 /* vestido.jpg in Resources */,
 				4A25ECF41E882FA5007B0408 /* Enciende la tele.jpg in Resources */,
 				4A25ECF31E882FA5007B0408 /* Duchar.jpg in Resources */,
@@ -499,6 +512,7 @@
 				4A17C7BB1E65ADA500EF029F /* café.jpg in Resources */,
 				4A17C7BC1E65ADA500EF029F /* morado.jpg in Resources */,
 				4A36BEA31E65579F00E70389 /* contento-a.jpg in Resources */,
+				4A7B03B01E89661F00E04363 /* icon_Speak.png in Resources */,
 				4A36BEA51E65579F00E70389 /* Enojado-a.jpg in Resources */,
 				4A25ECFB1E882FA5007B0408 /* Levantarse.jpg in Resources */,
 				4A25ED171E8842A9007B0408 /* tenis - hombremujer.jpg in Resources */,
@@ -522,6 +536,7 @@
 				4A25ECD41E882AE3007B0408 /* Si.jpg in Resources */,
 				4A17C7A91E65A57B00EF029F /* 8.jpg in Resources */,
 				4A25ECF51E882FA5007B0408 /* Hablar.jpg in Resources */,
+				4A7B03AE1E89641D00E04363 /* share-button.jpg in Resources */,
 				4A17C7C01E65ADA500EF029F /* Rosa fuerte.jpg in Resources */,
 				4A17C7A61E65A57B00EF029F /* 5.jpg in Resources */,
 				4A25ED161E8842A9007B0408 /* shorts - mujer hombre.jpg in Resources */,
@@ -547,6 +562,7 @@
 				4A17C7811E65A1BA00EF029F /* NumerosViewController.swift in Sources */,
 				4A36BE911E64986800E70389 /* GeneroViewController.swift in Sources */,
 				4A17C77D1E65A15300EF029F /* CamaViewController.swift in Sources */,
+				4A7B03AC1E89638400E04363 /* ConfiguraViewController.swift in Sources */,
 				4A36BE991E6553A100E70389 /* EmoViewController.swift in Sources */,
 				4A36BE931E64A6C200E70389 /* EdadViewController.swift in Sources */,
 				4A17C77B1E65A12700EF029F /* bañoViewController.swift in Sources */,
