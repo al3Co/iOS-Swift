@@ -11,6 +11,8 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var startOutletButton: UIButton!
+    
     var generoselection:Int = 0
     var edadSelection:Int = 0
     
@@ -24,13 +26,15 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "Selecciona", sender: sender)
         }
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewData()
         createAlert(title: "Audio", message: "No olvides activar el audio en tu dispositivo")
-        // Do any additional setup after loading the view, typically from a nib.
+        startOutletButton.backgroundColor = .clear
+        startOutletButton.layer.cornerRadius = 10
+        startOutletButton.layer.borderWidth = 2
+        startOutletButton.layer.borderColor = UIColor.black.cgColor
     }
 
     override func didReceiveMemoryWarning() {

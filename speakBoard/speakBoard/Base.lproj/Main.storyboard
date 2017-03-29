@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nqj-7d-c3L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nqj-7d-c3L">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -114,7 +114,7 @@
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kfD-p2-bfn">
                                 <rect key="frame" x="46" y="94" width="228" height="444"/>
-                                <mutableString key="text">Objetivo: Implementar una aplicación que facilite la comunicación vía sonido para personas con cualquier limitación o trastorno de habla. Las personas  con discapacidad de aprendizaje basada en lenguaje también podrían ayudarse de ésta aplicación pero no del todo, por el hecho de que personas con esta discapacidad pueden tener más dificultades en otras áreas que solo en el habla, creando situaciones más específicas en su tratamiento.                                                                                 Contacto: Eduardo Contreras                    ingelalito@gmail.com                                                                      Programación: Aldo Contreras</mutableString>
+                                <string key="text">Objetivo: Implementar una aplicación que facilite la comunicación vía sonido para personas con cualquier limitación o trastorno de habla. Las personas  con discapacidad de aprendizaje basada en lenguaje también podrían ayudarse de ésta aplicación pero no del todo, por el hecho de que personas con esta discapacidad pueden tener más dificultades en otras áreas que solo en el habla, creando situaciones más específicas en su tratamiento.                                                                                 Contacto: Eduardo Contreras                    ingelalito@gmail.com                                                                      Programación: Aldo Contreras</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -153,10 +153,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snF-45-xNM">
                                 <rect key="frame" x="116" y="258.5" width="88" height="51"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Iniciar">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnb-7V-gpM"/>
@@ -182,6 +181,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="startOutletButton" destination="snF-45-xNM" id="UU2-br-bfh"/>
                         <segue destination="3DY-Mz-vbm" kind="show" identifier="Genero" id="Gc6-6P-kZ9"/>
                         <segue destination="Jhm-Zt-dxA" kind="show" identifier="Selecciona" id="pI6-th-X5d"/>
                     </connections>
@@ -1479,8 +1479,8 @@
         <image name="zapatos.jpg" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pMx-TL-Fho"/>
-        <segue reference="Jeg-fF-7cb"/>
         <segue reference="Gc6-6P-kZ9"/>
+        <segue reference="pI6-th-X5d"/>
+        <segue reference="Jeg-fF-7cb"/>
     </inferredMetricsTieBreakers>
 </document>
