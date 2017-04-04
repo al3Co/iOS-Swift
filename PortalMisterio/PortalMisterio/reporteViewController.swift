@@ -9,7 +9,7 @@
 import UIKit
 import Social
 
-class reporteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class reporteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate{
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var imagePicked: UIImageView!
@@ -20,7 +20,8 @@ class reporteViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var viewWait: UIActivityIndicatorView!
     
     let context = CIContext(options: nil)
-    let textToShare:String = "#PortalMisterio "
+    var textTwitter:String = ""
+    var textFacebook:String = "@PortalMisterio "
     
     var chosenImage = UIImage()
     var selector:String = ""
@@ -62,48 +63,48 @@ class reporteViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func enviarButton(_ sender: Any) {
         if (selector == "comentar"){
-            if (textViewOutlet.text == ""){
+            if (textViewOutlet.text.isEmpty || textViewOutlet.text == "Escribe aquí tu comentario para Twitter ..."){
                 textInitial = "No olvides escribir tu comentario"
+                textTwitter = "#PortalMisterio_ "
+                textFacebook = "@PortalMisterio "
             }
             else{
                 textInitial = "No olvides compartir tu ubicación"
+                textTwitter = "#PortalMisterio_ " + self.textViewOutlet.text
+                textFacebook = "@PortalMisterio " + self.textViewOutlet.text
             }
-            let alert = UIAlertController(title: "Compartir", message: textInitial, preferredStyle: .actionSheet)
-            
-            let actionOne = UIAlertAction(title: "Facebook", style: .default) { (action) in
-                let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-                post.setInitialText("@PortalMisterio " + self.textViewOutlet.text)
-                post.add(UIImage(named: "img.png"))
-                self.present(post, animated: true, completion: nil)
-            }
-            let actionTwo = UIAlertAction(title: "Twitter", style: .default) { (action) in
-                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-                post.setInitialText("#PortalMisterio" + self.textViewOutlet.text)
-                self.present(post, animated: true, completion: nil)
-            }
-            let actionThree = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            //Add action to action sheet
-            alert.addAction(actionOne)
-            alert.addAction(actionTwo)
-            alert.addAction(actionThree)
-            //Present alert
-            self.present(alert, animated: true, completion: nil)
         }
         if (selector == "reportar" || selector == "capturar"){
-            let alert = UIAlertController(title: "Compartir", message: "No olvides compartir la ubicación", preferredStyle: .actionSheet)
-            let actionOne = UIAlertAction(title: "Twitter", style: .default) { (action) in
-                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-                post.setInitialText(self.textToShare)
-                post.add(self.chosenImage)
-                self.present(post, animated: true, completion: nil)
-            }
-            let actionThree = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
-            alert.addAction(actionOne)
-            alert.addAction(actionThree)
-            
-            self.present(alert, animated: true, completion: nil)
+            textInitial = "No olvides compartir tu ubicación"
+            textTwitter = "#PortalMisterio_ "
+            textFacebook = "@PortalMisterio "
         }
+        socialMedia()
+    }
+    
+    func socialMedia(){
+        let alert = UIAlertController(title: "Compartir", message: textInitial, preferredStyle: .actionSheet)
+        
+        let actionOne = UIAlertAction(title: "Facebook", style: .default) { (action) in
+            let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
+            post.setInitialText(self.textFacebook)
+            if (self.selector == "reportar" || self.selector == "capturar"){post.add(self.chosenImage)}
+            self.present(post, animated: true, completion: nil)
+        }
+        let actionTwo = UIAlertAction(title: "Twitter", style: .default) { (action) in
+            let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+            post.setInitialText(self.textTwitter)
+            if (self.selector == "reportar" || self.selector == "capturar"){post.add(self.chosenImage)}
+            self.present(post, animated: true, completion: nil)
+        }
+        let actionThree = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        //Add action to action sheet
+        alert.addAction(actionOne)
+        alert.addAction(actionTwo)
+        alert.addAction(actionThree)
+        //Present alert
+        self.present(alert, animated: true, completion: nil)
+    
     }
     
     @IBAction func filtroButton(_ sender: Any) {
@@ -153,7 +154,11 @@ class reporteViewController: UIViewController, UIImagePickerControllerDelegate, 
         buttonsRound()
         super.viewDidLoad()
         picker.delegate = self
+        textViewOutlet.delegate = self
         viewWait.isHidden = true
+        
+        textViewOutlet.text = "Escribe aquí tu comentario para Twitter ..."
+        textViewOutlet.textColor = UIColor.lightGray
     }
 
     override func didReceiveMemoryWarning() {
@@ -192,6 +197,20 @@ class reporteViewController: UIViewController, UIImagePickerControllerDelegate, 
         filtroOutletButton.layer.cornerRadius = 5
         filtroOutletButton.layer.borderWidth = 1
         filtroOutletButton.layer.borderColor = UIColor.gray.cgColor
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textViewOutlet.textColor == UIColor.lightGray {
+            textViewOutlet.text = nil
+            textViewOutlet.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textViewOutlet.text.isEmpty {
+            textViewOutlet.text = "Escribe aquí tu comentario para Twitter ..."
+            textViewOutlet.textColor = UIColor.lightGray
+        }
     }
     
     // To hide the keyboard

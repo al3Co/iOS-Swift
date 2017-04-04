@@ -17,6 +17,10 @@
 		4A2BE3D61E898235003FE64B /* PM_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BE3D21E898235003FE64B /* PM_icon.jpg */; };
 		4A2BE3D71E898235003FE64B /* portalblanco.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BE3D31E898235003FE64B /* portalblanco.png */; };
 		4A2BE3D81E898235003FE64B /* portalnegro.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BE3D41E898235003FE64B /* portalnegro.png */; };
+		4A34C6821E93C151007C4B6D /* Board.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A34C67F1E93C151007C4B6D /* Board.png */; };
+		4A34C6831E93C151007C4B6D /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A34C6801E93C151007C4B6D /* Cross.png */; };
+		4A34C6841E93C151007C4B6D /* Nought.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A34C6811E93C151007C4B6D /* Nought.png */; };
+		4A34C6861E93C2EC007C4B6D /* ticTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A34C6851E93C2EC007C4B6D /* ticTacToeViewController.swift */; };
 		4AF9D53E1E9286BA004AA0D7 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D53D1E9286BA004AA0D7 /* menuViewController.swift */; };
 		4AF9D5401E928863004AA0D7 /* reporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D53F1E928863004AA0D7 /* reporteViewController.swift */; };
 		4AF9D5421E92AA5A004AA0D7 /* videoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D5411E92AA5A004AA0D7 /* videoViewController.swift */; };
@@ -35,6 +39,10 @@
 		4A2BE3D21E898235003FE64B /* PM_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PM_icon.jpg; sourceTree = "<group>"; };
 		4A2BE3D31E898235003FE64B /* portalblanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portalblanco.png; sourceTree = "<group>"; };
 		4A2BE3D41E898235003FE64B /* portalnegro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portalnegro.png; sourceTree = "<group>"; };
+		4A34C67F1E93C151007C4B6D /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Board.png; sourceTree = "<group>"; };
+		4A34C6801E93C151007C4B6D /* Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
+		4A34C6811E93C151007C4B6D /* Nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nought.png; sourceTree = "<group>"; };
+		4A34C6851E93C2EC007C4B6D /* ticTacToeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ticTacToeViewController.swift; sourceTree = "<group>"; };
 		4AF9D53D1E9286BA004AA0D7 /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		4AF9D53F1E928863004AA0D7 /* reporteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reporteViewController.swift; sourceTree = "<group>"; };
 		4AF9D5411E92AA5A004AA0D7 /* videoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoViewController.swift; sourceTree = "<group>"; };
@@ -75,11 +83,15 @@
 				4AF9D53D1E9286BA004AA0D7 /* menuViewController.swift */,
 				4AF9D53F1E928863004AA0D7 /* reporteViewController.swift */,
 				4AF9D5411E92AA5A004AA0D7 /* videoViewController.swift */,
+				4A34C6851E93C2EC007C4B6D /* ticTacToeViewController.swift */,
 				4A2BE3C01E8981DA003FE64B /* Main.storyboard */,
 				4A2BE3C61E8981DA003FE64B /* Assets.xcassets */,
 				4A2BE3C81E8981DA003FE64B /* LaunchScreen.storyboard */,
 				4A2BE3CB1E8981DA003FE64B /* Info.plist */,
 				4A2BE3C31E8981DA003FE64B /* PortalMisterio.xcdatamodeld */,
+				4A34C67F1E93C151007C4B6D /* Board.png */,
+				4A34C6801E93C151007C4B6D /* Cross.png */,
+				4A34C6811E93C151007C4B6D /* Nought.png */,
 				4A2BE3D11E898235003FE64B /* About.png */,
 				4A2BE3D21E898235003FE64B /* PM_icon.jpg */,
 				4A2BE3D31E898235003FE64B /* portalblanco.png */,
@@ -148,12 +160,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A34C6841E93C151007C4B6D /* Nought.png in Resources */,
 				4A2BE3D71E898235003FE64B /* portalblanco.png in Resources */,
 				4A2BE3CA1E8981DA003FE64B /* LaunchScreen.storyboard in Resources */,
 				4A2BE3C71E8981DA003FE64B /* Assets.xcassets in Resources */,
 				4A2BE3C21E8981DA003FE64B /* Main.storyboard in Resources */,
+				4A34C6821E93C151007C4B6D /* Board.png in Resources */,
 				4A2BE3D51E898235003FE64B /* About.png in Resources */,
 				4A2BE3D81E898235003FE64B /* portalnegro.png in Resources */,
+				4A34C6831E93C151007C4B6D /* Cross.png in Resources */,
 				4A2BE3D61E898235003FE64B /* PM_icon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +185,7 @@
 				4AF9D53E1E9286BA004AA0D7 /* menuViewController.swift in Sources */,
 				4A2BE3BD1E8981DA003FE64B /* AppDelegate.swift in Sources */,
 				4AF9D5421E92AA5A004AA0D7 /* videoViewController.swift in Sources */,
+				4A34C6861E93C2EC007C4B6D /* ticTacToeViewController.swift in Sources */,
 				4A2BE3C51E8981DA003FE64B /* PortalMisterio.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
