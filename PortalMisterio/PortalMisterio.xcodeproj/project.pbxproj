@@ -17,8 +17,9 @@
 		4A2BE3D61E898235003FE64B /* PM_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BE3D21E898235003FE64B /* PM_icon.jpg */; };
 		4A2BE3D71E898235003FE64B /* portalblanco.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BE3D31E898235003FE64B /* portalblanco.png */; };
 		4A2BE3D81E898235003FE64B /* portalnegro.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BE3D41E898235003FE64B /* portalnegro.png */; };
-		4A2BE3DA1E898A52003FE64B /* CapturarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BE3D91E898A52003FE64B /* CapturarViewController.swift */; };
-		4A2BE3DC1E898A6D003FE64B /* ReportarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BE3DB1E898A6D003FE64B /* ReportarViewController.swift */; };
+		4AF9D53E1E9286BA004AA0D7 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D53D1E9286BA004AA0D7 /* menuViewController.swift */; };
+		4AF9D5401E928863004AA0D7 /* reporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D53F1E928863004AA0D7 /* reporteViewController.swift */; };
+		4AF9D5421E92AA5A004AA0D7 /* videoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D5411E92AA5A004AA0D7 /* videoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		4A2BE3D21E898235003FE64B /* PM_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PM_icon.jpg; sourceTree = "<group>"; };
 		4A2BE3D31E898235003FE64B /* portalblanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portalblanco.png; sourceTree = "<group>"; };
 		4A2BE3D41E898235003FE64B /* portalnegro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portalnegro.png; sourceTree = "<group>"; };
-		4A2BE3D91E898A52003FE64B /* CapturarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturarViewController.swift; sourceTree = "<group>"; };
-		4A2BE3DB1E898A6D003FE64B /* ReportarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportarViewController.swift; sourceTree = "<group>"; };
+		4AF9D53D1E9286BA004AA0D7 /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
+		4AF9D53F1E928863004AA0D7 /* reporteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reporteViewController.swift; sourceTree = "<group>"; };
+		4AF9D5411E92AA5A004AA0D7 /* videoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +72,9 @@
 			children = (
 				4A2BE3BC1E8981DA003FE64B /* AppDelegate.swift */,
 				4A2BE3BE1E8981DA003FE64B /* ViewController.swift */,
-				4A2BE3DB1E898A6D003FE64B /* ReportarViewController.swift */,
-				4A2BE3D91E898A52003FE64B /* CapturarViewController.swift */,
+				4AF9D53D1E9286BA004AA0D7 /* menuViewController.swift */,
+				4AF9D53F1E928863004AA0D7 /* reporteViewController.swift */,
+				4AF9D5411E92AA5A004AA0D7 /* videoViewController.swift */,
 				4A2BE3C01E8981DA003FE64B /* Main.storyboard */,
 				4A2BE3C61E8981DA003FE64B /* Assets.xcassets */,
 				4A2BE3C81E8981DA003FE64B /* LaunchScreen.storyboard */,
@@ -162,10 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A2BE3DA1E898A52003FE64B /* CapturarViewController.swift in Sources */,
-				4A2BE3DC1E898A6D003FE64B /* ReportarViewController.swift in Sources */,
+				4AF9D5401E928863004AA0D7 /* reporteViewController.swift in Sources */,
 				4A2BE3BF1E8981DA003FE64B /* ViewController.swift in Sources */,
+				4AF9D53E1E9286BA004AA0D7 /* menuViewController.swift in Sources */,
 				4A2BE3BD1E8981DA003FE64B /* AppDelegate.swift in Sources */,
+				4AF9D5421E92AA5A004AA0D7 /* videoViewController.swift in Sources */,
 				4A2BE3C51E8981DA003FE64B /* PortalMisterio.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +332,7 @@
 				4A2BE3D01E8981DA003FE64B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
