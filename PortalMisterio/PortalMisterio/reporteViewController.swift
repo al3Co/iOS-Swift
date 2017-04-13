@@ -108,6 +108,7 @@ class reporteViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func filtroButton(_ sender: Any) {
+        loadingHUD()
         viewWait.isHidden = false
         let inputImage = CIImage(image: imagePicked.image!)
         let randomColor = [kCIInputAngleKey: (Double(arc4random_uniform(314)) / 100)]
@@ -115,6 +116,14 @@ class reporteViewController: UIViewController, UIImagePickerControllerDelegate, 
         let renderedImage = context.createCGImage(filteredImage!, from: filteredImage!.extent)
         imagePicked.image = UIImage(cgImage: renderedImage!)
         viewWait.isHidden = true
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func loadingHUD(){
+        let spinnerActivity = MBProgressHUD.showAdded(to: self.view, animated: true);
+        spinnerActivity.label.text = "Loading";
+        spinnerActivity.detailsLabel.text = "Please Wait!!";
+        spinnerActivity.isUserInteractionEnabled = false;
     }
     
     private func comentarFunc(){

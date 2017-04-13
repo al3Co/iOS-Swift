@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ticTacToeViewController: UIViewController {
     
@@ -38,9 +39,11 @@ class ticTacToeViewController: UIViewController {
                     gameIsActive = false
                     if (gameState[combination[0]] == 1){
                         label.text = "CRUZ HA GANADO!"
+                        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                     }
                     else{
                         label.text = "CEROS HA GANADO!"
+                        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                     }
                     gameFinished = true
                     playAgainButton.isHidden = false
@@ -56,6 +59,7 @@ class ticTacToeViewController: UIViewController {
             }
             if gameIsActive == false{
                 label.text = "EMPATE!!!"
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                 gameFinished = true
                 label.isHidden = false
                 playAgainButton.isHidden = false

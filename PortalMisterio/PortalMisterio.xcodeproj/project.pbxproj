@@ -21,6 +21,7 @@
 		4A34C6831E93C151007C4B6D /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A34C6801E93C151007C4B6D /* Cross.png */; };
 		4A34C6841E93C151007C4B6D /* Nought.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A34C6811E93C151007C4B6D /* Nought.png */; };
 		4A34C6861E93C2EC007C4B6D /* ticTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A34C6851E93C2EC007C4B6D /* ticTacToeViewController.swift */; };
+		4A747D981E9FFC3600078A06 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A747D971E9FFC3600078A06 /* MBProgressHUD.m */; };
 		4AF9D53E1E9286BA004AA0D7 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D53D1E9286BA004AA0D7 /* menuViewController.swift */; };
 		4AF9D5401E928863004AA0D7 /* reporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D53F1E928863004AA0D7 /* reporteViewController.swift */; };
 		4AF9D5421E92AA5A004AA0D7 /* videoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D5411E92AA5A004AA0D7 /* videoViewController.swift */; };
@@ -43,6 +44,9 @@
 		4A34C6801E93C151007C4B6D /* Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
 		4A34C6811E93C151007C4B6D /* Nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nought.png; sourceTree = "<group>"; };
 		4A34C6851E93C2EC007C4B6D /* ticTacToeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ticTacToeViewController.swift; sourceTree = "<group>"; };
+		4A747D951E9FFC3600078A06 /* PortalMisterio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PortalMisterio-Bridging-Header.h"; sourceTree = "<group>"; };
+		4A747D961E9FFC3600078A06 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4A747D971E9FFC3600078A06 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		4AF9D53D1E9286BA004AA0D7 /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		4AF9D53F1E928863004AA0D7 /* reporteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reporteViewController.swift; sourceTree = "<group>"; };
 		4AF9D5411E92AA5A004AA0D7 /* videoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,9 @@
 				4A2BE3C01E8981DA003FE64B /* Main.storyboard */,
 				4A2BE3C61E8981DA003FE64B /* Assets.xcassets */,
 				4A2BE3C81E8981DA003FE64B /* LaunchScreen.storyboard */,
+				4A747D961E9FFC3600078A06 /* MBProgressHUD.h */,
+				4A747D971E9FFC3600078A06 /* MBProgressHUD.m */,
+				4A747D951E9FFC3600078A06 /* PortalMisterio-Bridging-Header.h */,
 				4A2BE3CB1E8981DA003FE64B /* Info.plist */,
 				4A2BE3C31E8981DA003FE64B /* PortalMisterio.xcdatamodeld */,
 				4A34C67F1E93C151007C4B6D /* Board.png */,
@@ -133,6 +140,7 @@
 					4A2BE3B81E8981DA003FE64B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QSW6ZC2GTH;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -187,6 +195,7 @@
 				4AF9D5421E92AA5A004AA0D7 /* videoViewController.swift in Sources */,
 				4A34C6861E93C2EC007C4B6D /* ticTacToeViewController.swift in Sources */,
 				4A2BE3C51E8981DA003FE64B /* PortalMisterio.xcdatamodeld in Sources */,
+				4A747D981E9FFC3600078A06 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,11 +316,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QSW6ZC2GTH;
 				INFOPLIST_FILE = PortalMisterio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AldoPersonal.PortalMisterio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PortalMisterio/PortalMisterio-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -320,11 +332,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QSW6ZC2GTH;
 				INFOPLIST_FILE = PortalMisterio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AldoPersonal.PortalMisterio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PortalMisterio/PortalMisterio-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
