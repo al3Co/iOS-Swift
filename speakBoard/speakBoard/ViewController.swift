@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var generoselection:Int = 0
     var edadSelection:Int = 0
+    var timer: Timer!
     
     @IBAction func startButton(_ sender: AnyObject!) {
         reviewData()
@@ -33,8 +34,11 @@ class ViewController: UIViewController {
         createAlert(title: "Audio", message: "No olvides activar el audio en tu dispositivo")
         startOutletButton.backgroundColor = .clear
         startOutletButton.layer.cornerRadius = 10
-        startOutletButton.layer.borderWidth = 2
+        startOutletButton.layer.borderWidth = 3
         startOutletButton.layer.borderColor = UIColor.black.cgColor
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.setRandomBackgroundColor), userInfo: nil, repeats: true)
+        self.setRandomBackgroundColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +49,22 @@ class ViewController: UIViewController {
     override var prefersStatusBarHidden: Bool{
         return true
     }
+    
+    func setRandomBackgroundColor() {
+        let colors = [
+            UIColor.black,
+            UIColor.blue,
+            UIColor.brown,
+            UIColor.red,
+            UIColor.darkGray,
+            UIColor.green,
+            UIColor.purple
+        ]
+        let randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
+        self.startOutletButton.setTitleColor(colors[randomColor], for: UIControlState.normal)
+        startOutletButton.layer.borderColor = colors[randomColor].cgColor
+    }
+    
     
     func reviewData(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -80,7 +100,6 @@ class ViewController: UIViewController {
     func createAlert (title:String, message:String)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
         //CREATING ON BUTTON
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)

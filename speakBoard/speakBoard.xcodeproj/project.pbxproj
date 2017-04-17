@@ -72,6 +72,8 @@
 		4A25ED181E8842A9007B0408 /* vestido.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED0A1E8842A9007B0408 /* vestido.jpg */; };
 		4A25ED191E8842A9007B0408 /* zapatillas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED0B1E8842A9007B0408 /* zapatillas.jpg */; };
 		4A25ED1A1E8842A9007B0408 /* zapatos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A25ED0C1E8842A9007B0408 /* zapatos.jpg */; };
+		4A3542631EA4DC6E00AE048C /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3542621EA4DC6E00AE048C /* CreditosViewController.swift */; };
+		4A3542651EA4DC8700AE048C /* EnviarComentarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3542641EA4DC8700AE048C /* EnviarComentarioViewController.swift */; };
 		4A36BE6F1E64916500E70389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36BE6E1E64916500E70389 /* AppDelegate.swift */; };
 		4A36BE711E64916500E70389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36BE701E64916500E70389 /* ViewController.swift */; };
 		4A36BE741E64916500E70389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A36BE721E64916500E70389 /* Main.storyboard */; };
@@ -174,6 +176,8 @@
 		4A25ED0A1E8842A9007B0408 /* vestido.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vestido.jpg; sourceTree = "<group>"; };
 		4A25ED0B1E8842A9007B0408 /* zapatillas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zapatillas.jpg; sourceTree = "<group>"; };
 		4A25ED0C1E8842A9007B0408 /* zapatos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zapatos.jpg; sourceTree = "<group>"; };
+		4A3542621EA4DC6E00AE048C /* CreditosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
+		4A3542641EA4DC8700AE048C /* EnviarComentarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnviarComentarioViewController.swift; sourceTree = "<group>"; };
 		4A36BE6B1E64916500E70389 /* speakBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speakBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A36BE6E1E64916500E70389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A36BE701E64916500E70389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -350,6 +354,8 @@
 				4A17C77E1E65A17500EF029F /* ColoresViewController.swift */,
 				4A17C7801E65A1BA00EF029F /* NumerosViewController.swift */,
 				4A7B03AB1E89638400E04363 /* ConfiguraViewController.swift */,
+				4A3542621EA4DC6E00AE048C /* CreditosViewController.swift */,
+				4A3542641EA4DC8700AE048C /* EnviarComentarioViewController.swift */,
 				4A36BE721E64916500E70389 /* Main.storyboard */,
 				4A36BE781E64916500E70389 /* Assets.xcassets */,
 				4A36BE7A1E64916500E70389 /* LaunchScreen.storyboard */,
@@ -561,11 +567,13 @@
 				4A36BE951E64BB0700E70389 /* NBasicasViewController.swift in Sources */,
 				4A17C7811E65A1BA00EF029F /* NumerosViewController.swift in Sources */,
 				4A36BE911E64986800E70389 /* GeneroViewController.swift in Sources */,
+				4A3542651EA4DC8700AE048C /* EnviarComentarioViewController.swift in Sources */,
 				4A17C77D1E65A15300EF029F /* CamaViewController.swift in Sources */,
 				4A7B03AC1E89638400E04363 /* ConfiguraViewController.swift in Sources */,
 				4A36BE991E6553A100E70389 /* EmoViewController.swift in Sources */,
 				4A36BE931E64A6C200E70389 /* EdadViewController.swift in Sources */,
 				4A17C77B1E65A12700EF029F /* bañoViewController.swift in Sources */,
+				4A3542631EA4DC6E00AE048C /* CreditosViewController.swift in Sources */,
 				4A36BE971E65537C00E70389 /* NecBasViewController.swift in Sources */,
 				4A36BE771E64916500E70389 /* speakBoard.xcdatamodeld in Sources */,
 				4A36BE711E64916500E70389 /* ViewController.swift in Sources */,
