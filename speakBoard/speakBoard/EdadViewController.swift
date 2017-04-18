@@ -41,6 +41,11 @@ class EdadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chicoOButton.layer.cornerRadius = 10
+        adolescenteOButton.layer.cornerRadius = 10
+        grandeOButton.layer.cornerRadius = 10
+        
         reviewData()
         if (generoselection == 1){
             imagenView.image = UIImage(named: "fondo_hombres.jpg")
@@ -54,8 +59,6 @@ class EdadViewController: UIViewController {
             adolescenteOButton.backgroundColor = UIColor.purple
             grandeOButton.backgroundColor = UIColor.purple
         }
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,14 +105,5 @@ class EdadViewController: UIViewController {
             print("Saving edad error : \(error) \(error.userInfo)")
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

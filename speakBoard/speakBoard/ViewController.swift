@@ -32,10 +32,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         reviewData()
         createAlert(title: "Audio", message: "No olvides activar el audio en tu dispositivo")
-        startOutletButton.backgroundColor = .clear
+        //startOutletButton.backgroundColor = .clear
         startOutletButton.layer.cornerRadius = 10
-        startOutletButton.layer.borderWidth = 3
-        startOutletButton.layer.borderColor = UIColor.black.cgColor
+        //startOutletButton.layer.borderWidth = 3
+        //startOutletButton.layer.borderColor = UIColor.black.cgColor
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.setRandomBackgroundColor), userInfo: nil, repeats: true)
         self.setRandomBackgroundColor()
@@ -55,14 +55,13 @@ class ViewController: UIViewController {
             UIColor.black,
             UIColor.blue,
             UIColor.brown,
-            UIColor.red,
             UIColor.darkGray,
-            UIColor.green,
             UIColor.purple
         ]
         let randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
-        self.startOutletButton.setTitleColor(colors[randomColor], for: UIControlState.normal)
-        startOutletButton.layer.borderColor = colors[randomColor].cgColor
+        //self.startOutletButton.setTitleColor(colors[randomColor], for: UIControlState.normal)
+        //startOutletButton.layer.borderColor = colors[randomColor].cgColor
+        startOutletButton.backgroundColor = colors[randomColor] as UIColor
     }
     
     

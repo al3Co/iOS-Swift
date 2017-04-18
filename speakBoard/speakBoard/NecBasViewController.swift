@@ -22,10 +22,15 @@ class NecBasViewController: UIViewController {
     @IBOutlet weak var NumerOButton: UIButton!
     
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        basicOButton.layer.cornerRadius = 10
+        bañoOButton.layer.cornerRadius = 10
+        camaOButton.layer.cornerRadius = 10
+        teleOButton.layer.cornerRadius = 10
+        NumerOButton.layer.cornerRadius = 10
+        
         reviewData()
         if (generoselection == 1){
             imageView.image = UIImage(named: "fondo_hombres.jpg")

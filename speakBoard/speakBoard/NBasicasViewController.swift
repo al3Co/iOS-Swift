@@ -26,10 +26,13 @@ class NBasicasViewController: UIViewController {
         self.navigationController!.popToRootViewController(animated: true)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NBasicOButton.layer.cornerRadius = 10
+        EmoOButton.layer.cornerRadius = 10
+        inicioOButton.layer.cornerRadius = 10
+        
         reviewData()
         if (generoselection == 1){
             imagenView.image = UIImage(named: "fondo_hombres.jpg")
