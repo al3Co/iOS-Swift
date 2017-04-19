@@ -73,7 +73,8 @@ class NBasicasViewController: UIViewController {
         EmoOButton.layer.cornerRadius = 10
         inicioOButton.layer.cornerRadius = 10
         
-        reviewData()
+        reviewUsersData()
+        
         if (generoselection == 1){
             imagenView.image = UIImage(named: "fondo_hombres.jpg")
             generoLabel.text = "Hombre"
@@ -115,36 +116,9 @@ class NBasicasViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-    func reviewData(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserData")
-        
-        request.returnsObjectsAsFaults = false
-        do{
-            let results = try context.fetch(request)
-            var count = 0
-            if results.count > 0{
-                for result in results as! [NSManagedObject]{
-                    // Agregar aqui la funcion de edad
-                    if let edad = result.value(forKey: "edad"){
-                        edadSelection = edad as! Int
-                        //print("Edad Core Data \(edad)")
-                    }
-                    if count == 0 {
-                        if let genero = result.value(forKey: "genero"){
-                            generoselection = genero as! Int
-                            //print("Genero Core Data \(genero)")
-                        }
-                    }
-                    count += 1
-                }
-            }
-        }
-        catch let error as NSError {
-            print("Reviewing genero error : \(error) \(error.userInfo)")
-        }
+    func reviewUsersData(){
+        generoselection = usersData.reviewData(key: "genero")
+        edadSelection = usersData.reviewData(key: "edad")
     }
 
 }

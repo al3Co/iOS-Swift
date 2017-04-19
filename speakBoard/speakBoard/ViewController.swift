@@ -18,9 +18,7 @@ class ViewController: UIViewController {
     var timer: Timer!
     
     @IBAction func startButton(_ sender: AnyObject!) {
-        reviewData()
-        print("edad: \(edadSelection)")
-        print("genero: \(generoselection)")
+        reviewUserData()
         if (generoselection == 0 || edadSelection == 0){
             performSegue(withIdentifier: "Genero", sender: sender)
         } else{
@@ -30,7 +28,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        reviewData()
+        reviewUserData()
         createAlert(title: "Audio", message: "No olvides activar el audio en tu dispositivo")
         //startOutletButton.backgroundColor = .clear
         startOutletButton.layer.cornerRadius = 10
@@ -64,36 +62,9 @@ class ViewController: UIViewController {
         startOutletButton.backgroundColor = colors[randomColor] as UIColor
     }
     
-    
-    func reviewData(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserData")
-        
-        request.returnsObjectsAsFaults = false
-        do{
-            let results = try context.fetch(request)
-            var count = 0
-            if results.count > 0{
-                for result in results as! [NSManagedObject]{
-                    // Agregar aqui la funcion de edad
-                    if let edad = result.value(forKey: "edad"){
-                        edadSelection = edad as! Int
-                        //print("Edad Core Data \(edad)")
-                    }
-                    if count == 0 {
-                        if let genero = result.value(forKey: "genero"){
-                            generoselection = genero as! Int
-                            //print("Genero Core Data \(genero)")
-                        }
-                    }
-                    count += 1
-                }
-            }
-        }
-        catch let error as NSError {
-            print("Reviewing genero error : \(error) \(error.userInfo)")
-        }
+    func reviewUserData(){
+        edadSelection = usersData.reviewData(key: "edad")
+        generoselection = usersData.reviewData(key: "genero")
     }
     
     func createAlert (title:String, message:String)
@@ -102,7 +73,7 @@ class ViewController: UIViewController {
         //CREATING ON BUTTON
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
-            print ("Audio OK")
+            //  Add some code here
         }))
         self.present(alert, animated: true, completion: nil)
     }

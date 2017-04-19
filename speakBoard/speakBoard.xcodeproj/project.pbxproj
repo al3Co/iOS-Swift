@@ -108,6 +108,7 @@
 		4A7B03AE1E89641D00E04363 /* share-button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B03AD1E89641D00E04363 /* share-button.jpg */; };
 		4A7B03B01E89661F00E04363 /* icon_Speak.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B03AF1E89661F00E04363 /* icon_Speak.png */; };
 		4A7B03B21E896BCB00E04363 /* Cambier_genero.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B03B11E896BCB00E04363 /* Cambier_genero.png */; };
+		4ADCC1171EA7ECB800FC7973 /* dataSaved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADCC1161EA7ECB800FC7973 /* dataSaved.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -214,6 +215,7 @@
 		4A7B03AD1E89641D00E04363 /* share-button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "share-button.jpg"; sourceTree = "<group>"; };
 		4A7B03AF1E89661F00E04363 /* icon_Speak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_Speak.png; sourceTree = "<group>"; };
 		4A7B03B11E896BCB00E04363 /* Cambier_genero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cambier_genero.png; sourceTree = "<group>"; };
+		4ADCC1161EA7ECB800FC7973 /* dataSaved.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataSaved.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +358,7 @@
 				4A7B03AB1E89638400E04363 /* ConfiguraViewController.swift */,
 				4A3542621EA4DC6E00AE048C /* CreditosViewController.swift */,
 				4A3542641EA4DC8700AE048C /* EnviarComentarioViewController.swift */,
+				4ADCC1161EA7ECB800FC7973 /* dataSaved.swift */,
 				4A36BE721E64916500E70389 /* Main.storyboard */,
 				4A36BE781E64916500E70389 /* Assets.xcassets */,
 				4A36BE7A1E64916500E70389 /* LaunchScreen.storyboard */,
@@ -570,6 +573,7 @@
 				4A3542651EA4DC8700AE048C /* EnviarComentarioViewController.swift in Sources */,
 				4A17C77D1E65A15300EF029F /* CamaViewController.swift in Sources */,
 				4A7B03AC1E89638400E04363 /* ConfiguraViewController.swift in Sources */,
+				4ADCC1171EA7ECB800FC7973 /* dataSaved.swift in Sources */,
 				4A36BE991E6553A100E70389 /* EmoViewController.swift in Sources */,
 				4A36BE931E64A6C200E70389 /* EdadViewController.swift in Sources */,
 				4A17C77B1E65A12700EF029F /* bañoViewController.swift in Sources */,
@@ -706,6 +710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AldoPersonal.speakBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -720,6 +725,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AldoPersonal.speakBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

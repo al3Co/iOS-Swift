@@ -21,7 +21,6 @@ class BasicoViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func actionButton(_ sender: AnyObject) {
-        print("Button: \(sender.tag.description)")
         switch sender.tag {
         case 0:
             nameAudio = "Calor"
@@ -43,7 +42,7 @@ class BasicoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reviewData()
+        reviewUsersData()
         if (generoselection == 1){
             imageView.image = UIImage(named: "fondo_hombres.jpg")
         }
@@ -58,36 +57,9 @@ class BasicoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    func reviewData(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserData")
-        
-        request.returnsObjectsAsFaults = false
-        do{
-            let results = try context.fetch(request)
-            var count = 0
-            if results.count > 0{
-                for result in results as! [NSManagedObject]{
-                    // Agregar aqui la funcion de edad
-                    if let edad = result.value(forKey: "edad"){
-                        edadSelection = edad as! Int
-                        // print("Edad Core Data \(edad)")
-                    }
-                    if count == 0 {
-                        if let genero = result.value(forKey: "genero"){
-                            generoselection = genero as! Int
-                            // print("Genero Core Data \(genero)")
-                        }
-                    }
-                    count += 1
-                }
-            }
-        }
-        catch let error as NSError {
-            print("Reviewing genero error : \(error) \(error.userInfo)")
-        }
+    func reviewUsersData(){
+        generoselection = usersData.reviewData(key: "genero")
+        edadSelection = usersData.reviewData(key: "edad")
     }
     
     func selectorFolder(){
@@ -106,7 +78,6 @@ class BasicoViewController: UIViewController {
         else if (generoselection == 2){
             audioRoot = audioRoot + "M"
         }
-        print(audioRoot)
     }
     
     func playAudioPlayer(){

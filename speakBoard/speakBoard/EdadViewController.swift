@@ -30,7 +30,8 @@ class EdadViewController: UIViewController {
         adolescenteOButton.layer.cornerRadius = 10
         grandeOButton.layer.cornerRadius = 10
         
-        reviewData()
+        reviewUserData()
+        
         if (generoselection == 1){
             imagenView.image = UIImage(named: "fondo_hombres.jpg")
             chicoOButton.backgroundColor = UIColor.blue
@@ -83,17 +84,17 @@ class EdadViewController: UIViewController {
     
     @IBAction func chicoButton(_ sender: Any) {
         edadSelection = 1
-        storeData()
+        saveUsersData()
         performSegue(withIdentifier: "edadToSelec", sender: nil)
     }
     @IBAction func adolescenteButton(_ sender: Any) {
         edadSelection = 2
-        storeData()
+        saveUsersData()
         performSegue(withIdentifier: "edadToSelec", sender: nil)
     }
     @IBAction func grandeButton(_ sender: Any) {
         edadSelection = 3
-        storeData()
+        saveUsersData()
         performSegue(withIdentifier: "edadToSelec", sender: nil)
     }
     
@@ -104,44 +105,12 @@ class EdadViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func reviewData(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserData")
-        
-        request.returnsObjectsAsFaults = false
-        do{
-            let results = try context.fetch(request)
-            var count = 0
-            if results.count > 0{
-                for result in results as! [NSManagedObject]{
-                    if count == 0 {
-                        if let genero = result.value(forKey: "genero"){
-                            generoselection = genero as! Int
-                        }
-                    }
-                    count += 1
-                }
-            }
-        }
-        catch let error as NSError {
-            print("Reviewing genero error : \(error) \(error.userInfo)")
-        }
+    func reviewUserData(){
+        generoselection = usersData.reviewData(key: "genero")
     }
     
-    func storeData(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let newGenero = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context)
-        newGenero.setValue(edadSelection, forKey: "edad")
-        do{
-            try context.save()
-            print("Edad saved: \(edadSelection)")
-        }
-        catch let error as NSError {
-            print("Saving edad error : \(error) \(error.userInfo)")
-        }
+    func saveUsersData(){
+        usersData.saveData(Data: edadSelection, key: "edad")
     }
 
 }
