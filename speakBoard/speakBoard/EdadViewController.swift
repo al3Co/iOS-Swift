@@ -19,25 +19,9 @@ class EdadViewController: UIViewController {
     @IBOutlet weak var adolescenteOButton: UIButton!
     @IBOutlet weak var grandeOButton: UIButton!
     
-    @IBAction func chicoButton(_ sender: Any) {
-        edadSelection = 1
-        storeData()
-        performSegue(withIdentifier: "edadToSelec", sender: nil)
-    }
-    @IBAction func adolescenteButton(_ sender: Any) {
-        edadSelection = 2
-        storeData()
-        performSegue(withIdentifier: "edadToSelec", sender: nil)
-    }
-    @IBAction func grandeButton(_ sender: Any) {
-        edadSelection = 3
-        storeData()
-        performSegue(withIdentifier: "edadToSelec", sender: nil)
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        edadSelection = 0
-        // deleteAllData()
-    }
+    @IBOutlet weak var centerAlignChico: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignAdolecente: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignGrande: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +44,60 @@ class EdadViewController: UIViewController {
             grandeOButton.backgroundColor = UIColor.purple
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        centerAlignChico.constant -= view.bounds.width
+        centerAlignAdolecente.constant -= view.bounds.width
+        centerAlignGrande.constant -= view.bounds.width
+        
+        chicoOButton.isHidden = true
+        adolescenteOButton.isHidden = true
+        grandeOButton.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        edadSelection = 0
+        // deleteAllData()
+        
+        chicoOButton.isHidden = false
+        adolescenteOButton.isHidden = false
+        grandeOButton.isHidden = false
+        
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.centerAlignChico.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.15, options: .curveEaseOut, animations: {
+            self.centerAlignAdolecente.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.3, options: .curveEaseOut, animations: {
+            self.centerAlignGrande.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    @IBAction func chicoButton(_ sender: Any) {
+        edadSelection = 1
+        storeData()
+        performSegue(withIdentifier: "edadToSelec", sender: nil)
+    }
+    @IBAction func adolescenteButton(_ sender: Any) {
+        edadSelection = 2
+        storeData()
+        performSegue(withIdentifier: "edadToSelec", sender: nil)
+    }
+    @IBAction func grandeButton(_ sender: Any) {
+        edadSelection = 3
+        storeData()
+        performSegue(withIdentifier: "edadToSelec", sender: nil)
+    }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -17,13 +17,53 @@ class NBasicasViewController: UIViewController {
     @IBOutlet weak var imagenView: UIImageView!
     @IBOutlet weak var generoLabel: UILabel!
     @IBOutlet weak var edadLabel: UILabel!
+    
     @IBOutlet weak var NBasicOButton: UIButton!
     @IBOutlet weak var EmoOButton: UIButton!
     @IBOutlet weak var inicioOButton: UIButton!
     
+    @IBOutlet weak var centerAlignNBasic: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignEmo: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignInicio: NSLayoutConstraint!
+    
+    
     
     @IBAction func inicioActionButton(_ sender: Any) {
         self.navigationController!.popToRootViewController(animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        centerAlignNBasic.constant -= view.bounds.width
+        centerAlignEmo.constant -= view.bounds.width
+        centerAlignInicio.constant -= view.bounds.width
+        
+        NBasicOButton.isHidden = true
+        EmoOButton.isHidden = true
+        inicioOButton.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NBasicOButton.isHidden = false
+        EmoOButton.isHidden = false
+        inicioOButton.isHidden = false
+        
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.centerAlignNBasic.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.15, options: .curveEaseOut, animations: {
+            self.centerAlignEmo.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.3, options: .curveEaseOut, animations: {
+            self.centerAlignInicio.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -106,16 +146,5 @@ class NBasicasViewController: UIViewController {
             print("Reviewing genero error : \(error) \(error.userInfo)")
         }
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

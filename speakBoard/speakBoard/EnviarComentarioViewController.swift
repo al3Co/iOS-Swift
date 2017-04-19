@@ -28,7 +28,6 @@ class EnviarComentarioViewController: UIViewController, UITextViewDelegate, MFMa
     }
     
     @IBAction func enviarButtonAction(_ sender: Any) {
-        print(textViewOutlet.text)
         if (textViewOutlet.text.isEmpty || textViewOutlet.text == "Escribe aquí tu nombre y comentario"){
             let Alert = UIAlertController(title: "Caja de comentario vacía", message: "Escribe en la caja para enviar tu comentario", preferredStyle: .alert)
             let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)

@@ -21,6 +21,13 @@ class NecBasViewController: UIViewController {
     @IBOutlet weak var teleOButton: UIButton!
     @IBOutlet weak var NumerOButton: UIButton!
     
+    @IBOutlet weak var centerAlignBasic: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignBaño: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignCama: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignTele: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignNumer: NSLayoutConstraint!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +56,57 @@ class NecBasViewController: UIViewController {
             NumerOButton.backgroundColor = UIColor.purple
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        centerAlignBasic.constant -= view.bounds.width
+        centerAlignBaño.constant -= view.bounds.width
+        centerAlignCama.constant -= view.bounds.width
+        centerAlignTele.constant -= view.bounds.width
+        centerAlignNumer.constant -= view.bounds.width
+        
+        basicOButton.isHidden = true
+        bañoOButton.isHidden = true
+        camaOButton.isHidden = true
+        teleOButton.isHidden = true
+        NumerOButton.isHidden = true
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        basicOButton.isHidden = false
+        bañoOButton.isHidden = false
+        camaOButton.isHidden = false
+        teleOButton.isHidden = false
+        NumerOButton.isHidden = false
+        
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.centerAlignBasic.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.15, options: .curveEaseOut, animations: {
+            self.centerAlignBaño.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.30, options: .curveEaseOut, animations: {
+            self.centerAlignCama.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.45, options: .curveEaseOut, animations: {
+            self.centerAlignTele.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0.6, options: .curveEaseOut, animations: {
+            self.centerAlignNumer.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
