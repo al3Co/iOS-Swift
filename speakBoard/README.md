@@ -12,8 +12,8 @@
 `SpeakBoard` is software to help any person, whether child or adult, who has a certain limitation or speech disorder, to facilitate their communication to other people.
 
 ## Features
-- **Swift 3 is ready** :thumbsup:
-
+- **Swift 3** :thumbsup:
+- All audios required added
 
 ## Requirements
 - iOS 10.0+
@@ -31,4 +31,4 @@
 
 ## License
 
-**SpeakBoard**
+**SpeakBoard** private license
