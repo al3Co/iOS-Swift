@@ -32,12 +32,12 @@
 ## AlertFunction
 
 
-##Gyro
+## Gyro
 
-##HelloWorld
+## HelloWorld
 
-##HideKeyBoard
+## HideKeyBoard
 
-##Playground
+## Playground
 
-##PortalMisterio
+## PortalMisterio
