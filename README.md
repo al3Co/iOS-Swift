@@ -9,25 +9,45 @@
 `iOS-Swift` Development codes for mobile applications. Various methods, tips and tricks to facilitate development.
 
 ## Features
-- **Swift 3** :thumbsup:
 
 ### AlertFunction
 
+Method to Create a Scheduled Alert
+
 ### Gyro
+
+Method to obtain the data of the gyroscope and accelerometer of your phone
 
 ### HelloWorld
 
+Nice Hello World on Swift
+
 ### HideKeyBoard
+
+Method to hide the keyboard
 
 ### Playground
 
+- Arrays
+- Classes
+- Functions
+- Count Days from Dates
+
 ### PortalMisterio
+
+Portal Misterio :thumbsup:
 
 ### UIDatePicker
 
+Get the date
+
 ### quizApp
 
+Easy method to code a quiz
+
 ### SpeakBoard
+
+`SpeakBoard` is software to help any person, whether child or adult, who has a certain limitation or speech disorder, to facilitate their communication to other people.
 
 
 ## Requirements
