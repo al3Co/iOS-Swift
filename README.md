@@ -2,7 +2,12 @@
   <a href="#features">Features</a> |
   <a href="#requirements">Requirements</a> |
   <a href="#communication">Communication</a> |
-  <a href="#license">LICENSE</a>
+  <a href="#alertFunction">AlertFunction</a>|
+  <a href="#gyro">Gyro</a>|
+  <a href="#helloWorld">HelloWorld</a>|
+  <a href="#hideKeyboard">HideKeyBoard</a>|
+  <a href="#playground">Playground</a>|
+  <a href="#portalMisterio">PortalMisterio</a>
 </p>
 
 # iOS-Swift
@@ -24,5 +29,15 @@
 - Also, if you have a feature request, please open an issue. :thumbsup:
 - If you want to contribute, submit a pull request.:muscle:
 
-## LICENSE
-No license
+## AlertFunction
+
+
+##Gyro
+
+##HelloWorld
+
+##HideKeyBoard
+
+##Playground
+
+##PortalMisterio
