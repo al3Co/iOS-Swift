@@ -20,7 +20,7 @@ class ConfiguraViewController: UIViewController {
         //Alert
         let alert = UIAlertController(title: "Compartir", message: "Comparte la aplicación con tus amigos", preferredStyle: .actionSheet)
         
-        let shareText = "https://github.com/al3Co/iOS-Swift/tree/master/speakBoard"
+        let shareText = "http://ticdiscapacidad.com"
         
         //First action
         let actionOne = UIAlertAction(title: "Facebook", style: .default) { (action) in

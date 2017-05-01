@@ -98,6 +98,9 @@ class EnviarComentarioViewController: UIViewController, UITextViewDelegate, MFMa
             if let url = URL(string: UIApplicationOpenSettingsURLString) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
+//            if let url2:NSURL = NSURL(string : "prefs:root=General"){
+//                UIApplication.shared.open(url2 as URL, options: [:], completionHandler: nil)
+//            }
         }
         alertController.addAction(openAction)
         self.present(alertController, animated: true, completion: nil)
