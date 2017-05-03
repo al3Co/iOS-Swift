@@ -57,6 +57,6 @@ Easy method to code a quiz
 
 
 ## Communication
-- If you found a bug, please open an issue. :bow:
-- Also, if you have a feature request, please open an issue. :thumbsup:
-- If you want to contribute, submit a pull request.:muscle:
+- If you found a bug, please open an issue.
+- Also, if you have a feature request, please open an issue.
+- If you want to contribute, submit a pull request.
